@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from './theme'
-import Experience from './components/Experience'
+import Competences from './components/Competences'
 import Exemple2 from './components/Exemple2'
 import data from "./data"; 
 import CenteredTabs from './components/menu';
@@ -20,7 +20,7 @@ const App = () => {
       <CssBaseline />
       <CenteredTabs current={currentTab} onChange={onChangeTab} />
 
-      {currentTab === 1 && (<Experience />)}
+      {currentTab === 1 && (<Competences />)}
       {currentTab === 2 && (<Exemple2 title="Expériences" experiences={data.Experiences} />)}
       {currentTab === 0 && (<Home />)}
 
