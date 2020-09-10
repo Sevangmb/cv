@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Card,
          CardActionArea,
          CardMedia,
@@ -8,9 +7,9 @@ import { Card,
          CardActions,
          Button }     from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
-
 import Badge from "react-shields-badge";
 import "react-shields-badge/dist/react-shields-badge.css";
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -25,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const Item = () => {
+const Item = ({ image, title, content, badge }) => {
   const classes = useStyles()
   
   return (
@@ -33,27 +32,44 @@ const Item = () => {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1955&q=80"
-          title="Surprised monkey"
+          image={image}
+          title={title}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2" className={classes.title}>
-            OMG it's Sevan's skills !
+          <Typography gutterBottom variant="h5" component="h2" className={title}>
+            {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          Ingrédients : nodejs 54%, npm, react, material-ui 6,0%, prop-types, react-shields-badge, use-typed.
+            {content}
           </Typography>
-          <Badge data={["npm", "v1.0.0"]} /> <Badge backgroundColor={["#5b5b5b", "#4cc61f"]} data={["react", "v1.0.0"]} />
+          {badge && <Badge data={[badge.name, badge.version]} backgroundColor={[badge.bgleft, badge.bgright]} />}
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" href="https://unsplash.com/photos/Z05GiksmqYU">
-          See it on Unsplash
+        <Button size="small" color="primary" href="#">
+          En savoir plus !
         </Button>
       </CardActions>
     </Card>
-    
   )
 }
+
+Item.defaultProps = {
+  title: 'Wow',
+  content: 'It s amazing !',
+  image: 'https://pixabay.com/images/id-5424776/',
+};
+
+Item.propTypes = {
+	title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  badge: PropTypes.shape({
+    name: PropTypes.string,
+    version: PropTypes.string,
+    bgleft: PropTypes.string,
+    bgright: PropTypes.string,
+  }),
+};
 
 export default Item
