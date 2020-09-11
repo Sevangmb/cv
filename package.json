@@ -1,5 +1,5 @@
 {
-  "name": "cv",
+  "name": "mon-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -41,4 +41,3 @@
     "prettier": "2.0.5"
   }
 }
-
