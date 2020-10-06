@@ -72,7 +72,7 @@ const Competences = () => {
         <Grid item xs>
           <Item 
             title="World of warcraft" 
-            content="Chasseur lvl 120. Donjon, raid. Metiers : cuisine, peche, travail du cuir et depessage au max !" 
+            content="Chasseur lvl 120. Donjons, raids. Metiers : cuisine, peche, travail du cuir et depessage au max !" 
             image="https://as1.ftcdn.net/jpg/02/97/41/58/500_F_297415844_RQplmtTHNTNBJC8Mo2NbIfmUo9J7B1FT.jpg"
             badge={{
               name: 'Chasseur',
