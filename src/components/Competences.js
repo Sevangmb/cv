@@ -40,7 +40,7 @@ const Competences = () => {
             content="Gestion de portefeuille clients, suivi de commandes fournisseurs/clients, devis, suivi des litiges/SAV, gestion des réceptions/livraisons et de stock. " 
             image="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
             badge={{
-              name: 'Gestion Commerciale',
+              name: 'Gestion',
               version: 'v1.0.0',
               bgleft: '#5b5b5b',
               bgright: '#0f80c0',
