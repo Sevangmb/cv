@@ -27,7 +27,7 @@ const Competences = () => {
             content="Formation, dépannage, support, mise à jour et migration des logiciels de gestions, et comptabilité Sage, Codial et EBP." 
             image="https://media.istockphoto.com/photos/double-explosure-with-businesss-charts-of-graph-and-rows-of-coins-for-picture-id1051617040"
             badge={{
-              name: 'Sage',
+              name: 'Sage, EBP, Codial',
               version: 'v1.0.0',
               bgleft: '#5b5b5b',
               bgright: '#4cc61f',
@@ -36,7 +36,7 @@ const Competences = () => {
         </Grid>
         <Grid item xs>
           <Item 
-            title="Commerce " 
+            title="Commerce" 
             content="Gestion de portefeuille clients, suivi de commandes fournisseurs/clients, devis, suivi des litiges/SAV, gestion des réceptions/livraisons et de stock. " 
             image="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
             badge={{
