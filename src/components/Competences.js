@@ -27,7 +27,7 @@ const Competences = () => {
             content="Formation, dépannage, support, mise à jour et migration des logiciels de gestions, et comptabilité Sage, Codial et EBP." 
             image="https://media.istockphoto.com/photos/double-explosure-with-businesss-charts-of-graph-and-rows-of-coins-for-picture-id1051617040"
             badge={{
-              name: 'Sage, EBP, Codial',
+              name: 'Sage',
               version: 'v1.0.0',
               bgleft: '#5b5b5b',
               bgright: '#4cc61f',
@@ -42,6 +42,12 @@ const Competences = () => {
             badge={{
               name: 'Gestion',
               version: 'v1.0.0',
+              bgleft: '#5b5b5b',
+              bgright: '#0f80c0',
+            }}
+            badge={{
+              name: 'SAV',
+              version: 'v2.5.0',
               bgleft: '#5b5b5b',
               bgright: '#0f80c0',
             }}
