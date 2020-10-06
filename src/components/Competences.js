@@ -44,14 +44,7 @@ const Competences = () => {
               version: 'v1.0.0',
               bgleft: '#5b5b5b',
               bgright: '#0f80c0',
-            }}
-            badge={{
-              name: 'SAV',
-              version: 'v2.5.0',
-              bgleft: '#5b5b5b',
-              bgright: '#0f80c0',
-            }}
-            
+            }}            
             //<Badge backgroundColor={["#5b5b5b", "#4cc61f"]} data={["react", "v1.0.0"]} />}
           />
         </Grid>
