@@ -73,3 +73,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ![GitHub top language](https://img.shields.io/github/languages/top/Sevangmb/cv)
 ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsevan.zone%2F)
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/Sevangmb/cv)
+
+![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/Sevangmb/cv/react)
+![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/Sevangmb/cv/@material-ui/core)
+![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/Sevangmb/cv/react-shields-badge)
+![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/Sevangmb/cv/typed.js)
+![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/Sevangmb/cv/use-typed)
