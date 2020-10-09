@@ -72,3 +72,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ![Website](https://img.shields.io/website?down_color=red&down_message=down&up_color=green&up_message=online&url=https%3A%2F%2Fsevan.zone)
 ![GitHub top language](https://img.shields.io/github/languages/top/Sevangmb/cv)
 ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsevan.zone%2F)
+![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/Sevangmb/cv)
