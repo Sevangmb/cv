@@ -7,6 +7,7 @@ class Cv extends Component {
             <div className="Cv">
 				<Exemple2 />
 				<Exemple3 />
+				<Exemple1 />
             </div>
         );
     }
