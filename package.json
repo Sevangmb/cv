@@ -17,21 +17,15 @@
     "react-shields-badge": "^2.1.0",
     "typed.js": "^2.0.11",
     "use-typed": "0.0.1"
-  },
+  }, 
+  
   "scripts": {
- //   "start": "react-scripts start",
     "build": "react-scripts build",
- //   "test": "react-scripts test",
     "eject": "react-scripts eject"
-    
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
-    
   },
-  
-  
-
-  
+    
   "eslintConfig": {
     "extends": "react-app"
   },
