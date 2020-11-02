@@ -36,7 +36,7 @@ const Competences = () => {
         </Grid>
         <Grid item xs>
           <Item 
-            title="Commerce " 
+            title="Commerce" 
             content="Gestion de portefeuille clients, suivi de commandes fournisseurs/clients, devis, suivi des litiges/SAV, gestion des réceptions/livraisons et de stock. " 
             image="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
             badge={{
@@ -44,8 +44,7 @@ const Competences = () => {
               version: 'v1.0.0',
               bgleft: '#5b5b5b',
               bgright: '#0f80c0',
-            }}
-            
+            }}            
             //<Badge backgroundColor={["#5b5b5b", "#4cc61f"]} data={["react", "v1.0.0"]} />}
           />
         </Grid>
@@ -72,7 +71,7 @@ const Competences = () => {
         <Grid item xs>
           <Item 
             title="World of warcraft" 
-            content="Chasseur lvl 120. Donjon, raid. Metiers : cuisine, peche travail du cuir et depessage au max !" 
+            content="Chasseur lvl 120. Donjons, raids. Metiers : cuisine, peche, travail du cuir et depessage au max !" 
             image="https://as1.ftcdn.net/jpg/02/97/41/58/500_F_297415844_RQplmtTHNTNBJC8Mo2NbIfmUo9J7B1FT.jpg"
             badge={{
               name: 'Chasseur',
