@@ -30,9 +30,9 @@ export default function CenteredTabs({ current, onChange }) {
         centered
       >
         <Tab label="Home" />
-        <Tab label="Plex" />
         <Tab label="Competences" />
         <Tab label="Experience" />
+        <Tab label="Plex" />
       </Tabs>
     </Paper>
   );
