@@ -23,7 +23,6 @@ const App = () => {
       {currentTab === 1 && (<Competences />)}
       {currentTab === 2 && (<Exemple2 title="Expériences" experiences={data.Experiences} />)}
       {currentTab === 0 && (<Home />)}
-      {currentTab === 3 && (<Plex />)}
 
       
     </ThemeProvider>
