@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const Item = ({ image, title, content, badge }) => {
+const Item = ({ image, title, link, content, badge }) => {
   const classes = useStyles()
   
   return (
@@ -34,6 +34,7 @@ const Item = ({ image, title, content, badge }) => {
           className={classes.media}
           image={image}
           title={title}
+          link={link}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2" className={title}>
@@ -46,7 +47,7 @@ const Item = ({ image, title, content, badge }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" href="#">
+        <Button size="small" color="primary" href={link}>
           En savoir plus !
         </Button>
       </CardActions>
@@ -64,6 +65,7 @@ Item.propTypes = {
 	title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
   badge: PropTypes.shape({
     name: PropTypes.string,
     version: PropTypes.string,

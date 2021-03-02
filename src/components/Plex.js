@@ -2,6 +2,8 @@ import Item from './Item';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import ombi from '../img/ombi.png';
+import plex from '../img/plex.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Competences = () => {
+const Plex = () => {
 
   const classes = useStyles();
 
@@ -23,12 +25,13 @@ const Competences = () => {
       <Grid container spacing={3}>
         <Grid item xs>
           <Item 
-            title="Gestion " 
-            content="Formation, dépannage, support, mise à jour et migration des logiciels de gestions, et comptabilité Sage, Codial et EBP." 
-            image="https://media.istockphoto.com/photos/double-explosure-with-businesss-charts-of-graph-and-rows-of-coins-for-picture-id1051617040"
+            title="Ombi" 
+            content="Ombi te permet de faire des demandes Plex. Ca ne t'empeche pas de m'appeler ;)" 
+            image={ombi}
+            link="https://nl5025.dediseedbox.com:62816"
             badge={{
-              name: 'Sage',
-              version: 'v1.0.0',
+              name: 'Ombi',
+              version: 'Latest',
               bgleft: '#5b5b5b',
               bgright: '#4cc61f',
             }}
@@ -36,12 +39,12 @@ const Competences = () => {
         </Grid>
         <Grid item xs>
           <Item 
-            title="Commerce " 
-            content="Gestion de portefeuille clients, suivi de commandes fournisseurs/clients, devis, suivi des litiges/SAV, gestion des réceptions/livraisons et de stock. " 
-            image="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
+            title="Plex " 
+            content="Pedroflix, la seule VOD que tu aime plus de votre maman !" 
+            image={plex}
             badge={{
-              name: 'Gestion',
-              version: 'v1.0.0',
+              name: 'Plex',
+              version: 'Latest',
               bgleft: '#5b5b5b',
               bgright: '#0f80c0',
             }}
@@ -87,4 +90,4 @@ const Competences = () => {
   );
 }
 
-export default Competences
+export default Plex

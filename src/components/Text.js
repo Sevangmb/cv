@@ -15,7 +15,7 @@ const Installation = () => {
     const instruction = React.useRef(null);
 
     useTyped(instruction, {
-        strings: ["$ npm install ^1000\n cool-guy", 
+        strings: ["$ npm install ^1000\n cool-guy !", 
                   "$ npm add sevan ^1000\n",
                   "$ "],
         cursorChar: '_',

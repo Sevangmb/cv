@@ -32,6 +32,7 @@ export default function CenteredTabs({ current, onChange }) {
         <Tab label="Home" />
         <Tab label="Competences" />
         <Tab label="Experience" />
+        <Tab label="Pedroflix" />
       </Tabs>
     </Paper>
   );
