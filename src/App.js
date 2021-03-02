@@ -3,6 +3,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from './theme'
 import Competences from './components/Competences'
+import Plex from './components/Plex'
 import Exemple2 from './components/Exemple2'
 import data from "./data"; 
 import CenteredTabs from './components/menu';
@@ -22,6 +23,7 @@ const App = () => {
 
       {currentTab === 1 && (<Competences />)}
       {currentTab === 2 && (<Exemple2 title="Expériences" experiences={data.Experiences} />)}
+      {currentTab === 3 && (<Plex />)}
       {currentTab === 0 && (<Home />)}
 
       
