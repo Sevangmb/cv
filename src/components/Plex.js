@@ -40,7 +40,7 @@ const Plex = () => {
         <Grid item xs>
           <Item 
             title="Plex " 
-            content="Pedroflix, la seule VOD que tu aime plus de votre maman !" 
+            content="Pedroflix, la seule VOD que tu aimes plus de votre maman !" 
             image={plex}
             badge={{
               name: 'Plex',
