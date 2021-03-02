@@ -74,6 +74,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsevan.zone%2F)
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/Sevangmb/cv)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8de459c0-dd3c-4b0c-8748-f01bddbf9592/deploy-status)](https://app.netlify.com/sites/sevans/deploys)
+
 ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/Sevangmb/cv/react)
 ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/Sevangmb/cv/@material-ui/core)
 ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/Sevangmb/cv/react-shields-badge)
