@@ -66,8 +66,8 @@ const Plex = () => {
             image={thelounge}
             link="https://nl5025.dediseedbox.com:20704"
             badge={{
-              name: 'Debian',
-              version: 'v1.0.0',
+              name: 'Thelounge',
+              version: 'Latest',
               bgleft: '#5b5b5b',
               bgright: '#4cc61f',
             }}
