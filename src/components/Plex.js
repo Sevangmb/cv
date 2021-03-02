@@ -62,7 +62,7 @@ const Plex = () => {
         <Grid item xs>
           <Item 
             title="The Lounge" 
-            content="Windows, MacOS, Linux. MsOffice. Serveurs. SQL, PHP, CSS. Adobe." 
+            content="The lounge est un client irc web auto hébergé pour le monde modern." 
             image={thelounge}
             link="https://nl5025.dediseedbox.com:20704"
             badge={{
