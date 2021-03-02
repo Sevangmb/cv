@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ombi from '../img/ombi.png';
 import plex from '../img/plex.png';
+import thelounge from '../img/thelounge.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,7 +50,6 @@ const Plex = () => {
               bgright: '#0f80c0',
             }}
             
-            //<Badge backgroundColor={["#5b5b5b", "#4cc61f"]} data={["react", "v1.0.0"]} />}
           />
         </Grid>
         <Grid item xs>
@@ -61,9 +61,10 @@ const Plex = () => {
         </Grid>
         <Grid item xs>
           <Item 
-            title="Informatique" 
+            title="The Lounge" 
             content="Windows, MacOS, Linux. MsOffice. Serveurs. SQL, PHP, CSS. Adobe." 
-            image="https://as1.ftcdn.net/jpg/02/25/56/76/500_F_225567663_gPfQuBNATBPkZO8KEGl256xPqURL6cbd.jpg"
+            image={thelounge}
+            link="https://nl5025.dediseedbox.com:20704"
             badge={{
               name: 'Debian',
               version: 'v1.0.0',
