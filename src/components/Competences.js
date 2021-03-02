@@ -60,7 +60,7 @@ const Competences = () => {
         <Grid item xs>
           <Item 
             title="Support" 
-            content="Gestion des appels, call flow, suivi des dossiers client, traitement des tickets, 	diagnostique et dépannage. " 
+            content="Gestion des appels, call flow, suivi des dossiers client, traitement des tickets, diagnostique, et dépannage. " 
             image="https://image.shutterstock.com/image-photo/smiling-friendly-female-callcenter-agent-600w-1175066677.jpg"
           />
         </Grid>
