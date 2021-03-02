@@ -24,11 +24,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-<<<<<<< HEAD
 const Item = ({ image, title, link, content, badge }) => {
-=======
-const Item = ({ image, title, content, badge }) => {
->>>>>>> 549bdf5aeebddc3cfe8c7cbe2ca43007fce46308
   const classes = useStyles()
   
   return (
@@ -38,10 +34,7 @@ const Item = ({ image, title, content, badge }) => {
           className={classes.media}
           image={image}
           title={title}
-<<<<<<< HEAD
           link={link}
-=======
->>>>>>> 549bdf5aeebddc3cfe8c7cbe2ca43007fce46308
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2" className={title}>
@@ -54,11 +47,8 @@ const Item = ({ image, title, content, badge }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-<<<<<<< HEAD
         <Button size="small" color="primary" href={link}>
-=======
-        <Button size="small" color="primary" href="#">
->>>>>>> 549bdf5aeebddc3cfe8c7cbe2ca43007fce46308
+
           En savoir plus !
         </Button>
       </CardActions>
@@ -76,10 +66,8 @@ Item.propTypes = {
 	title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-<<<<<<< HEAD
   link: PropTypes.string.isRequired,
-=======
->>>>>>> 549bdf5aeebddc3cfe8c7cbe2ca43007fce46308
+
   badge: PropTypes.shape({
     name: PropTypes.string,
     version: PropTypes.string,
