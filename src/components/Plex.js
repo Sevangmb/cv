@@ -49,43 +49,9 @@ const Plex = () => {
               bgleft: '#5b5b5b',
               bgright: '#0f80c0',
             }}
-            
           />
-        </Grid>
-        <Grid item xs>
-          <Item 
-            title="Support" 
-            content="Gestion des appels, call flow, suivi des dossiers client, traitement des tickets, 	diagnostique et dépannage. " 
-            image="https://image.shutterstock.com/image-photo/smiling-friendly-female-callcenter-agent-600w-1175066677.jpg"
-          />
-        </Grid>
-        <Grid item xs>
-          <Item 
-            title="The Lounge" 
-            content="The lounge est un client irc web auto hébergé pour le monde modern." 
-            image={thelounge}
-            link="https://nl5025.dediseedbox.com:20704"
-            badge={{
-              name: 'Thelounge',
-              version: 'Latest',
-              bgleft: '#5b5b5b',
-              bgright: '#4cc61f',
-            }}
-          />
-        </Grid>
-        <Grid item xs>
-          <Item 
-            title="World of warcraft" 
-            content="Chasseur lvl 120. Donjon, raid. Metiers : cuisine, peche travail du cuir et depessage au max !" 
-            image="https://as1.ftcdn.net/jpg/02/97/41/58/500_F_297415844_RQplmtTHNTNBJC8Mo2NbIfmUo9J7B1FT.jpg"
-            badge={{
-              name: 'Chasseur',
-              version: 'v120',
-              bgleft: '#5b5b5b',
-              bgright: '#4cc61f',
-            }}
-          />
-        </Grid>
+          </Grid>
+
       </Grid>
     </div>
   );
