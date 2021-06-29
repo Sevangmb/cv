@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ombi from '../img/ombi.png';
 import plex from '../img/plex.png';
-import thelounge from '../img/thelounge.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
