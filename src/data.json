@@ -22,7 +22,7 @@
         ]
       },
       {
-        "companyName": "Demo2 Technologies",
+        "companyName": "Axess",
         "logo": "https://picsum.photos/100?random=2",
         "url": "https://www.google.com/",
         "roles": [
@@ -78,8 +78,6 @@
             "Hot": true
           }
         ]
-      }      
-    ]   
+      }
+    ]
     }
-    
-    
