@@ -8,9 +8,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(6),
     textAlign: 'center',
     color: theme.palette.text.secondary,
+  },
+  control: {
+  padding: theme.spacing(2),
   },
 }));
 
@@ -24,7 +27,7 @@ const Competences = () => {
         <Grid item xs>
           <Item
             title="Gestion "
-            content="Formation, dépannage, support, maj et migration des logiciels de gestions, et comptabilité Sage, Codial et EBP." 
+            content="Formation, dépannage, support, maj et migration des logiciels de gestions, et comptabilité Sage, Codial et EBP."
             image="https://media.istockphoto.com/photos/double-explosure-with-businesss-charts-of-graph-and-rows-of-coins-for-picture-id1051617040"
             badge={{
               name: 'Sage',

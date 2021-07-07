@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    margin: theme.spacing(6),
+    margin: theme.spacing(3),
     width: 345,
   },
   media: {
