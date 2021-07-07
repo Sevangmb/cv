@@ -21,34 +21,6 @@
           }
         ]
       },
-      {
-        "companyName": "APE Conseil",
-        "logo": "https://picsum.photos/100?random=2",
-        "url": "https://www.google.com/",
-        "roles": [
-          {
-            "title": "UI Designer",
-            "description": "Design user-fridendly web page",
-            "startDate": "2016-05-01",
-            "endDate": "2016-09-01",
-            "location": "Beijing, China"
-          }
-        ]
-      },
-      {
-        "companyName": "Axess",
-        "logo": "https://picsum.photos/100?random=3",
-        "url": "https://www.google.com/",
-        "roles": [
-          {
-            "title": "UI Designer",
-            "description": "Design user-fridendly web page",
-            "startDate": "2016-05-01",
-            "endDate": "2016-09-01",
-            "location": "Beijing, China"
-          }
-        ]
-      },
     ],
     "Skills": [
       {
