@@ -10,12 +10,12 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Installation = () => {
-    
+
     const classes = useStyles();
     const instruction = React.useRef(null);
 
     useTyped(instruction, {
-        strings: ["$ npm install ^1000\n cool-guy !", 
+        strings: ["$ npm install cool-guy !\n",
                   "$ npm add sevan ^1000\n",
                   "$ "],
         cursorChar: '_',

@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    margin: theme.spacing(3),
+    margin: theme.spacing(6),
     width: 345,
   },
   media: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 
 const Item = ({ image, title, link, content, badge }) => {
   const classes = useStyles()
-  
+
   return (
     <Card className={classes.root}>
       <CardActionArea>
