@@ -33,7 +33,31 @@ const useStyles = makeStyles((theme) => ({
 	},
   }));
 
-const Exemple2 = ({ title, experiences }) => {
+/**
+ * @typedef {object} Role
+ * @property {string} title - The title of the role.
+ * @property {string} description - A description of the role and responsibilities.
+ * @property {string} startDate - The start date of the role.
+ * @property {string} endDate - The end date of the role.
+ * @property {string} location - The location of the role.
+ */
+
+/**
+ * @typedef {object} ExperienceEntry
+ * @property {string} companyName - The name of the company.
+ * @property {string} logo - URL or path to the company logo.
+ * @property {string} url - URL to the company website.
+ * @property {Array<Role>} roles - An array of roles held at the company.
+ */
+
+/**
+ * Experience component displays a timeline of professional experiences.
+ * It takes a title and a list of experience entries to render.
+ * @param {object} props - The component's props.
+ * @param {string} props.title - The title to be displayed above the timeline.
+ * @param {Array<ExperienceEntry>} props.experiences - An array of experience objects to display.
+ */
+const Experience = ({ title, experiences }) => {
 	const classes = useStyles();
 
 	return (
@@ -73,22 +97,34 @@ const Exemple2 = ({ title, experiences }) => {
 	);
 };
 
-Exemple2.defaultProps = {
+Experience.defaultProps = {
 	title: '',
 };
-Exemple2.propTypes = {
+
+Experience.propTypes = {
+	/** The title to be displayed above the timeline. */
 	title: PropTypes.string,
+	/** An array of experience objects to display in the timeline. */
 	experiences: PropTypes.arrayOf(
 		PropTypes.shape({
+			/** The name of the company. */
 			companyName: PropTypes.string,
+			/** URL or path to the company logo. */
 			logo: PropTypes.string,
+			/** URL to the company website. */
 			url: PropTypes.string,
+			/** An array of roles held at the company. */
 			roles: PropTypes.arrayOf(
 				PropTypes.shape({
+					/** The title of the role. */
 					title: PropTypes.string,
+					/** A description of the role and responsibilities. */
 					description: PropTypes.string,
+					/** The start date of the role. */
 					startDate: PropTypes.string,
+					/** The end date of the role. */
 					endDate: PropTypes.string,
+					/** The location of the role. */
 					location: PropTypes.string,
 				})
 		  	),
@@ -96,4 +132,4 @@ Exemple2.propTypes = {
 	).isRequired,
 };
 
-export default Exemple2;
+export default Experience;

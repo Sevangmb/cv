@@ -4,15 +4,17 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from './theme'
 import Competences from './components/Competences'
 import Plex from './components/Plex'
-import Exemple2 from './components/Exemple2'
-import data from "./data"; 
+import Experience from './components/Experience'
+import { Experiences } from "./data.json"; 
 import CenteredTabs from './components/menu';
 import Home from './components/home';
 import Cv from './components/cv';
 
 const App = () => {
+  // Manages the currently active tab in the navigation menu.
   const [currentTab, setCurrentTab] = useState(0); 
 
+  // Callback function to update the active tab when a new tab is selected.
   const onChangeTab = (event, newValue) => {
       setCurrentTab(newValue);
   }
@@ -22,8 +24,9 @@ const App = () => {
       <CssBaseline />
       <CenteredTabs current={currentTab} onChange={onChangeTab} />
 
+      {/* Conditionally render components based on the currentTab value */}
       {currentTab === 1 && (<Competences />)}
-      {currentTab === 2 && (<Exemple2 title="Expériences" experiences={data.Experiences} />)}
+      {currentTab === 2 && (<Experience title="Expériences" experiences={Experiences} />)}
       {currentTab === 3 && (<Cv />)}
       {currentTab === 4 && (<Plex />)}
       {currentTab === 0 && (<Home />)}

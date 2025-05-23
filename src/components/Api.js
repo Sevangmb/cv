@@ -1,53 +1,20 @@
-import * as React from 'react';
-import Chip from '@mui/material/Chip';
-import FaceIcon from '@mui/icons-material/Face';
-import Stack from '@mui/material/Stack';
+import React from 'react';
+import useApiData from '../hooks/useApiData';
+import ApiDisplay from './ApiDisplay';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 
-class Api extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: null
-    };
-  }
+const Api = () => {
+  const { data, isLoading, error } = useApiData();
 
-  componentDidMount() {
-    const that = this;
-    const apiUrl =
-      "https://us-east-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/cv-xfzvw/service/cv/incoming_webhook/api?secret=cv";
-    fetch(apiUrl)
-      .then((res) => res.json())
-      .then((json) => {
-        that.setState({ data: json });
-      });
-  }
-  render() {
-    const result = (this.state.data || []).map(
-      function (item, id) {
-        return (
-          <div>
-            <span>{id}</span>
-            &nbsp;
-            <span>{item.title}</span>
-            &nbsp;
-            <span>{item.cast}</span>
-            {
-                            item.cast.map((castDetail) => {
-                              return (
-                                <Stack direction="row" spacing={1}> 
-                                <Chip size="small" icon={<FaceIcon />} label={castDetail} variant="outlined" />
-                                </Stack>
-                              );
-                              
-                            })
-                          }
-           v 
-          <span>{item.runtime.$numberInt}</span>
-          </div>
-        );
-      }
-    );
-    return result;
-  }
-}
+  return (
+    <Paper elevation={3} style={{ padding: '20px', margin: '20px' }}>
+      <Typography variant="h5" gutterBottom>
+        API Data
+      </Typography>
+      <ApiDisplay data={data} isLoading={isLoading} error={error} />
+    </Paper>
+  );
+};
+
 export default Api;

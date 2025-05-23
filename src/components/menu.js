@@ -1,19 +1,9 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-const useStyles = makeStyles((theme) => ({
-  paper: {
-      boxShadow: 'none',
-      background: theme.palette.background.default,
-  },
-}));
-
 export default function CenteredTabs({ current, onChange }) {
-  const classes = useStyles();
-
   const handleChange = (event, newValue) => {
     if (onChange) {
         onChange(event, newValue);
@@ -21,7 +11,10 @@ export default function CenteredTabs({ current, onChange }) {
 };
 
   return (
-    <Paper className={classes.paper}>
+    <Paper sx={{
+      boxShadow: 'none',
+      background: (theme) => theme.palette.background.default,
+    }}>
       <Tabs
         value={current}
         onChange={handleChange}
