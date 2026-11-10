@@ -9,10 +9,10 @@ import data from '../data';
 // avec le contenu du CV, et certaines ouvrent directement l'onglet correspondant.
 const useStyles = makeStyles(theme => ({
     paper: {
-        background: '#13201f',
-        color: '#ffcb74',
-        border: '6px solid #ea907a',
-        borderRadius: 18,
+        background: '#1c1c1c',
+        color: '#e8e6e1',
+        border: '1px solid #1c1c1c',
+        borderRadius: 4,
         width: '100%',
         maxWidth: 720,
         margin: theme.spacing(2),
@@ -22,8 +22,8 @@ const useStyles = makeStyles(theme => ({
         alignItems: 'center',
         justifyContent: 'space-between',
         padding: '4px 4px 4px 16px',
-        background: '#4f8a8b',
-        color: '#f4f6ff',
+        background: '#fffefb',
+        color: '#1c1c1c',
         fontFamily: 'monospace',
     },
     screen: {
@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const TABS = { accueil: 0, competences: 1, parcours: 2, projets: 3, cv: 4 };
+const SECTIONS = { profil: 'profil', parcours: 'parcours', competences: 'competences', formation: 'formation', projets: 'projets' };
 
 const linkedin = (data.SocialMedias.find(m => m.icon === 'linkedin') || {}).url;
 
@@ -67,29 +67,13 @@ const HELP = [
     '  projets      ce que je construis à côté',
     '  contact      comment me joindre',
     '  pdf          télécharger mon CV en PDF',
-    '  stats        ma fiche de personnage',
-    '  aller <onglet>  ouvrir un onglet (accueil, competences, parcours, projets, cv)',
+    '  aller <section> aller à une section (parcours, competences, formation, projets)',
     '  effacer      vider l’écran',
     '',
     'Vous pouvez aussi poser une question, par exemple :',
     '  « tu connais Sage ? », « tu parles anglais ? », « tu as le permis ? »',
 ].join('\n');
 
-// Fiche de personnage façon jeu de rôle : un clin d'œil, pas une évaluation.
-const STATS = [
-    'SEVAN SAFARIAN — classe : Support / Formateur',
-    'Expérience : 25 ans · Base : Valence (Drôme)',
-    '',
-    'Pédagogie       ██████████  10',
-    'Patience        █████████░   9',
-    'Relation client █████████░   9',
-    'Odoo / Sage     ████████░░   8',
-    'Linux / Docker  ███████░░░   7',
-    'Anglais         ██████░░░░   6',
-    '',
-    'Objets : CACES 1-3-5, certifications Sage et EBP, un serveur maison.',
-    'Pouvoir spécial : rappeler le client quand c’est réglé.',
-].join('\n');
 
 // Questions libres : on cherche des mots-clés et on répond à partir du CV.
 const FAQ = [
@@ -110,19 +94,18 @@ const answer = (raw, actions) => {
     if (cmd === '') return '';
     if (cmd === 'aide' || cmd === 'help') return HELP;
     if (cmd === 'qui' || cmd === 'whoami') {
-        return 'Sevan Safarian — chargé support logiciel (ERP Odoo, Sage, EBP) à Valence.\n'
-            + 'Formateur, dépanneur, ancien commercial, et bricoleur de serveurs le soir.';
+        return data.Profile;
     }
     if (cmd === 'parcours') {
         return data.Experiences.map(e => e.roles.map(r =>
-            `[${r.status === 'En cours' ? 'EN COURS' : 'RÉSOLU ✔'}] ${r.startDate} – ${r.endDate}  ${r.title} — ${e.companyName}`
+            `${r.startDate} – ${r.endDate}  ${r.title}, ${e.companyName}`
         ).join('\n')).join('\n') + '\n\n(tapez « aller parcours » pour le détail)';
     }
     if (cmd === 'competences') {
         return data.Skills.map(s => `${s.Area} : ${s.SkillSet.map(k => k.Name).join(', ')}`).join('\n\n');
     }
     if (cmd === 'projets') {
-        return data.Projects.map(p => `• ${p.name}${p.url ? ` (${p.url})` : ''}\n  ${p.description}`).join('\n');
+        return data.Projects.map(p => `• ${p.name}${p.url ? ` (${p.url})` : ''} : ${p.description}`).join('\n');
     }
     if (cmd === 'contact') {
         return `LinkedIn : ${linkedin}\nGitHub : https://github.com/Sevangmb\n(le plus simple : un message sur LinkedIn)`;
@@ -133,16 +116,14 @@ const answer = (raw, actions) => {
     }
     if (cmd === 'effacer' || cmd === 'clear') return null;
     if (cmd.startsWith('sudo')) return 'Bien essayé. Ici, on vérifie toujours trois fois avant d’effacer quoi que ce soit.';
-    if (cmd === 'odoo') return 'Odoo est démarré. Un ticket ? Je m’en occupe.';
     if (cmd.startsWith('aller ')) {
         const tab = cmd.slice(6).trim();
-        if (tab in TABS) {
-            actions.go(TABS[tab]);
-            return `Ouverture de l’onglet « ${tab} »…`;
+        if (tab in SECTIONS) {
+            actions.go(SECTIONS[tab]);
+            return `Direction « ${tab} »…`;
         }
-        return `Onglet inconnu : ${tab}`;
+        return `Section inconnue : ${tab}`;
     }
-    if (cmd === 'stats') return STATS;
     const faq = FAQ.find(([motif]) => motif.test(cmd));
     if (faq) return faq[1];
     return `Je n’ai pas compris « ${raw.trim()} ». Tapez « aide », ou posez une question sur mon parcours.`;
@@ -150,7 +131,7 @@ const answer = (raw, actions) => {
 
 const WELCOME = 'Bienvenue sur le terminal de Sevan.\nTapez « aide » pour la liste des commandes.';
 
-const Terminal = ({ open, onClose, onNavigate, pdfUrl }) => {
+const Terminal = ({ open, onClose, pdfUrl }) => {
     const classes = useStyles();
     const [lines, setLines] = useState([{ text: WELCOME }]);
     const [value, setValue] = useState('');
@@ -164,7 +145,7 @@ const Terminal = ({ open, onClose, onNavigate, pdfUrl }) => {
     }, [lines]);
 
     const actions = {
-        go: tab => setTimeout(() => { onNavigate(tab); onClose(); }, 500),
+        go: id => setTimeout(() => { onClose(); const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); }, 400),
         pdf: () => window.open(pdfUrl, '_blank', 'noopener'),
     };
 
@@ -186,7 +167,7 @@ const Terminal = ({ open, onClose, onNavigate, pdfUrl }) => {
             onEntered={focus} aria-labelledby="terminal-titre">
             <div className={classes.bar}>
                 <span id="terminal-titre">sevan@cv:~</span>
-                <IconButton size="small" onClick={onClose} aria-label="Fermer le terminal" style={{ color: '#f4f6ff' }}>
+                <IconButton size="small" onClick={onClose} aria-label="Fermer le terminal" style={{ color: '#1c1c1c' }}>
                     <CloseIcon fontSize="small" />
                 </IconButton>
             </div>

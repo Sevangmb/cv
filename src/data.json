@@ -1,11 +1,17 @@
 {
+  "Name": "Sevan Safarian",
+  "Title": "Chargé support logiciel",
+  "Place": "Valence (Drôme)",
+  "Profile": "Je fais du support logiciel depuis 2019 : Sage et EBP chez deux intégrateurs, puis l'ERP Odoo chez Herbarom depuis 2023. Avant cela, dix ans de vente technique dans le sanitaire et le chauffage, et trois ans de hotline à Montréal. J'ai commencé en 2000 en formant des particuliers et des mairies à l'informatique, en Ardèche.",
   "SocialMedias": [
     {
       "icon": "linkedin",
+      "label": "LinkedIn",
       "url": "https://www.linkedin.com/in/sevan-safarian-92217490"
     },
     {
       "icon": "github",
+      "label": "GitHub",
       "url": "https://github.com/Sevangmb"
     }
   ],
@@ -13,27 +19,18 @@
     {
       "companyName": "Herbarom Laboratoire",
       "logo": "herbarom",
-      "about": "Laboratoire drômois spécialisé dans l'extraction végétale : huiles essentielles, extraits de plantes et ingrédients naturels.",
+      "about": "extraction végétale, huiles essentielles",
       "url": "https://herbarom-groupe.com/",
       "roles": [
         {
-          "title": "Chargé support logiciel (ERP Odoo)",
-          "description": "Support et paramétrage de l'ERP Odoo pour les services de l'entreprise : traitement des tickets, diagnostic, formation des utilisateurs, évolutions et suivi des incidents.",
+          "title": "Chargé support logiciel",
           "startDate": "2023",
           "endDate": "aujourd'hui",
-          "location": "Valence (26)",
+          "location": "Valence",
           "details": [
-            "Support de l'ERP Odoo auprès des services de l'entreprise : tickets, diagnostic, dépannage.",
-            "Paramétrage, évolutions et suivi des incidents avec les utilisateurs.",
-            "Formation et accompagnement des utilisateurs.",
-            "Sensibilisation à la cybersécurité (2026)."
-          ],
-          "status": "En cours",
-          "tags": [
-            "Odoo",
-            "ERP",
-            "Support N1/N2",
-            "Formation"
+            "Support des utilisateurs de l'ERP Odoo.",
+            "Paramétrage et suivi des demandes.",
+            "Formation des utilisateurs."
           ]
         }
       ]
@@ -41,55 +38,35 @@
     {
       "companyName": "Axess Online",
       "logo": "axess",
-      "about": "Groupe du numérique basé à Valence : solutions informatiques, logiciels de gestion et accompagnement des entreprises.",
+      "about": "services informatiques et logiciels de gestion",
       "url": "https://www.axess.fr/",
       "roles": [
         {
           "title": "Technicien formateur logiciel",
-          "description": "Formation, installation, migration, paramétrage et support des logiciels de gestion et de comptabilité EBP.",
           "startDate": "2021",
           "endDate": "2023",
-          "location": "Valence (26)",
+          "location": "Valence",
           "details": [
-            "Formation des clients aux logiciels de gestion et de comptabilité EBP.",
-            "Installation, migration et paramétrage des dossiers.",
-            "Support utilisateurs et dépannage.",
-            "Certification EBP."
-          ],
-          "status": "Résolu",
-          "tags": [
-            "EBP",
-            "Comptabilité",
-            "Migration",
-            "Formation"
+            "Formation, installation, migration et paramétrage des logiciels de gestion et de comptabilité EBP.",
+            "Support et dépannage des clients."
           ]
         }
-      ],
-      "logoBg": "#1f2a44"
+      ]
     },
     {
       "companyName": "APE Conseil",
       "logo": "ape-conseil",
-      "about": "Prestataire informatique lyonnais depuis 1986 : infogérance, maintenance, cybersécurité et logiciels de gestion pour les TPE et PME.",
+      "about": "prestataire informatique pour les PME",
       "url": "https://www.ape-conseil.com/",
       "roles": [
         {
           "title": "Technicien formateur logiciel",
-          "description": "Formation, installation, migration, paramétrage et support des logiciels de gestion Sage, EBP et Codial.",
           "startDate": "2019",
           "endDate": "2021",
-          "location": "Rillieux-la-Pape (69)",
+          "location": "Rillieux-la-Pape",
           "details": [
-            "Formation, installation, migration et paramétrage des logiciels Sage, EBP et Codial.",
-            "Support et dépannage auprès des clients TPE et PME.",
-            "Certification Sage Batigest SQL ; formations internes Sage 50c et Codial."
-          ],
-          "status": "Résolu",
-          "tags": [
-            "Sage",
-            "EBP",
-            "Codial",
-            "Formation"
+            "Formation, installation, migration et paramétrage de Sage, EBP et Codial.",
+            "Support et dépannage des clients."
           ]
         }
       ]
@@ -97,26 +74,17 @@
     {
       "companyName": "Téréva",
       "logo": "tereva",
-      "about": "Distributeur pour le second œuvre du bâtiment (plomberie, sanitaire, chauffage), avec plus de 165 agences.",
+      "about": "distribution plomberie, sanitaire, chauffage",
       "url": "https://www.tereva.fr/",
       "roles": [
         {
           "title": "Vendeur conseil libre-service",
-          "description": "Accueil, gestion du magasin, devis, commandes, SAV plomberie, sanitaire et chauffage.",
           "startDate": "2017",
           "endDate": "2019",
-          "location": "Valence (26)",
+          "location": "Valence",
           "details": [
-            "Accueil et conseil des artisans et particuliers au comptoir libre-service.",
-            "Gestion du magasin, réceptions et stock.",
-            "Devis, commandes et SAV en plomberie, sanitaire et chauffage."
-          ],
-          "status": "Résolu",
-          "tags": [
-            "Plomberie",
-            "Chauffage",
-            "Devis",
-            "Stock"
+            "Accueil, gestion du magasin, devis, commandes.",
+            "SAV plomberie, sanitaire et chauffage."
           ]
         }
       ]
@@ -124,44 +92,26 @@
     {
       "companyName": "Brossette",
       "logo": "brossette",
-      "about": "Distributeur de sanitaire, chauffage et plomberie du groupe Saint-Gobain, aujourd'hui intégré à CEDEO.",
-      "url": "https://www.cedeo.fr/",
+      "about": "distribution sanitaire et chauffage, groupe Saint-Gobain",
+      "url": "",
       "roles": [
         {
           "title": "Vendeur conseil exposition",
-          "description": "Accueil, conception de salles de bain, devis, commandes, SAV.",
           "startDate": "2016",
           "endDate": "2017",
-          "location": "Valence – Romans (26)",
+          "location": "Valence – Romans",
           "details": [
-            "Accueil en salle d'exposition et conception de salles de bain.",
-            "Devis, commandes et SAV."
-          ],
-          "status": "Résolu",
-          "tags": [
-            "Salles de bain",
-            "Devis",
-            "SAV"
+            "Accueil en salle d'exposition, conception de salles de bain, devis, commandes, SAV."
           ]
         },
         {
           "title": "Attaché technico-commercial",
-          "description": "Gestion d'un portefeuille clients (grands comptes et artisans), suivi des commandes, chiffrages et litiges.",
           "startDate": "2008",
           "endDate": "2016",
-          "location": "Valence (26)",
+          "location": "Valence",
           "details": [
-            "Gestion d'un portefeuille clients : grands comptes et artisans.",
-            "Suivi des commandes fournisseurs et clients, chiffrages et litiges.",
-            "Formations internes Saint-Gobain : suivi client, sanitaire, techniques de vente, styles et tendances.",
-            "CACES 1, 3 et 5."
-          ],
-          "status": "Résolu",
-          "tags": [
-            "Grands comptes",
-            "Chiffrage",
-            "Saint-Gobain",
-            "CACES"
+            "Portefeuille de clients : grands comptes et artisans.",
+            "Suivi des commandes, chiffrages et litiges."
           ]
         }
       ]
@@ -169,27 +119,17 @@
     {
       "companyName": "Teleperformance",
       "logo": "teleperformance",
-      "about": "Leader mondial de la relation client externalisée (centres de contact).",
-      "url": "https://www.tp.com/",
+      "about": "centres de relation client",
+      "url": "",
       "roles": [
         {
-          "title": "Technicien hotline niveau 1",
-          "description": "Support technique internet (FAI Bell Sympatico), réseau domestique et Wi-Fi ; vente de connexions, logiciels et matériels.",
+          "title": "Technicien hotline",
           "startDate": "2005",
           "endDate": "2008",
-          "location": "Montréal (Québec, Canada)",
+          "location": "Montréal, Canada",
           "details": [
-            "Campagne Bell Sympatico, premier fournisseur d'accès internet du Québec.",
-            "Support technique internet et SAV : Freedom, MSN, réseau domestique, Wi-Fi.",
-            "Vente de connexions internet, de logiciels et de matériel.",
-            "Outils : Remedy, Lantern, Shots, IAF."
-          ],
-          "status": "Résolu",
-          "tags": [
-            "Hotline",
-            "Bell Sympatico",
-            "Remedy",
-            "Anglais"
+            "Support technique internet pour Bell Sympatico : connexion, MSN, réseau domestique, Wi-Fi.",
+            "Vente de connexions internet, de logiciels et de matériel."
           ]
         }
       ]
@@ -197,28 +137,19 @@
     {
       "companyName": "Info RC",
       "logo": "inforc",
-      "about": "Radio associative d'Aubenas (88.6 FM) : information et culture locales.",
-      "url": "https://www.inforc.fr/",
+      "about": "radio associative",
+      "url": "",
       "roles": [
         {
           "title": "Assistant technicien",
-          "description": "Formation du personnel au logiciel de statistiques Sphinx, numérisation vidéo, enregistrements studio et extérieur, montage.",
           "startDate": "12/2004",
           "endDate": "05/2005",
-          "location": "Aubenas (07)",
+          "location": "Aubenas",
           "details": [
             "Formation du personnel au logiciel de statistiques Sphinx.",
-            "Numérisation vidéo tous formats (U-matic, VHS, 8 mm, DV) et création de menus DVD.",
-            "Exposition multimédia pour les 20 ans de la radio.",
-            "Interviews (artistes, enfants, élus), accompagnement des enfants pour leurs émissions.",
-            "Enregistrements en studio et en extérieur, montage."
-          ],
-          "status": "Résolu",
-          "tags": [
-            "Sphinx",
-            "Vidéo",
-            "Son",
-            "Animation"
+            "Numérisation vidéo (U-matic, VHS, 8 mm, DV), menus DVD.",
+            "Enregistrements en studio et en extérieur, montage, interviews.",
+            "Exposition pour les 20 ans de la radio."
           ]
         }
       ]
@@ -226,25 +157,16 @@
     {
       "companyName": "Mecanorga Informatique",
       "logo": null,
-      "about": "Boutique et atelier informatique d'Aubenas.",
+      "about": "",
       "url": "",
       "roles": [
         {
           "title": "Technicien informatique",
-          "description": "Assemblage, dépannage et installation de PC, réseaux et photocopieurs pour particuliers, mairies, écoles et PME.",
-          "details": [
-            "Assemblage de PC.",
-            "Dépannage, configuration, installation matérielle et logicielle, réseaux.",
-            "Installation, entretien et dépannage de photocopieurs, imprimantes et fax."
-          ],
           "startDate": "11/2004",
           "endDate": "11/2004",
-          "location": "Aubenas (07)",
-          "status": "Résolu",
-          "tags": [
-            "Matériel",
-            "Réseaux",
-            "Imprimantes"
+          "location": "Aubenas",
+          "details": [
+            "Assemblage de PC, dépannage, réseaux, photocopieurs."
           ]
         }
       ]
@@ -252,29 +174,19 @@
     {
       "companyName": "Comité de Pays Centre Ardèche",
       "logo": null,
-      "about": "Structure de développement local des communes du centre Ardèche.",
+      "about": "",
       "url": "",
       "roles": [
         {
           "title": "Animateur NTIC",
-          "description": "Formation des particuliers, mairies, écoles et PME (Windows, Office, internet, création de sites web) ; dépannage, maintenance et réseau de 10 postes.",
           "startDate": "2000",
           "endDate": "2004",
-          "location": "Les Ollières-sur-Eyrieux (07)",
+          "location": "Les Ollières-sur-Eyrieux",
           "details": [
-            "Formation des particuliers, mairies, offices du tourisme et PME (groupes de 1 à 12 personnes) : Windows, Office, internet, création de sites.",
-            "Gestion du centre multimédia de 10 postes : routeur Cisco, serveur d'impression, sauvegardes Ghost, mises à jour.",
-            "Dépannage sur place et à domicile, assistance aux utilisateurs.",
-            "Création de sites web : office du tourisme Au Cœur de l'Ardèche, Comité de Pays, annuaire des associations.",
-            "Animation : visioconférences sur 8 sites, semaines multi-activités avec un centre aéré, journal trimestriel de l'école primaire.",
-            "Partenariat avec les Inforoutes de l'Ardèche (formation routeurs Cisco, web et législation)."
-          ],
-          "status": "Résolu",
-          "tags": [
-            "Formation",
-            "Sites web",
-            "Cisco",
-            "Visioconférence"
+            "Formation des particuliers, mairies, offices du tourisme et PME : Windows, Office, internet, création de sites.",
+            "Gestion du centre multimédia (10 postes, routeur Cisco), dépannage sur place et à domicile.",
+            "Sites de l'office du tourisme Au Cœur de l'Ardèche et du Comité de Pays.",
+            "Visioconférences entre 8 sites, journal de l'école primaire."
           ]
         }
       ]
@@ -284,217 +196,73 @@
     {
       "Area": "Logiciels de gestion",
       "SkillSet": [
-        {
-          "Name": "Odoo (support, paramétrage)",
-          "Hot": true
-        },
-        {
-          "Name": "Sage (certifié Batigest SQL), Sage 50c",
-          "Hot": true
-        },
-        {
-          "Name": "EBP (certifié), Codial",
-          "Hot": true
-        },
-        {
-          "Name": "Formation des utilisateurs, migrations, reprise de données",
-          "Hot": true
-        }
+        { "Name": "Odoo" },
+        { "Name": "Sage (certifié Batigest SQL), Sage 50c" },
+        { "Name": "EBP (certifié)" },
+        { "Name": "Codial" }
       ]
     },
     {
-      "Area": "Systèmes et auto-hébergement",
+      "Area": "Systèmes",
       "SkillSet": [
-        {
-          "Name": "Linux (Debian), Windows, macOS",
-          "Hot": true
-        },
-        {
-          "Name": "Docker, Docker Compose, reverse proxy",
-          "Hot": true
-        },
-        {
-          "Name": "ZFS, sauvegardes, supervision",
-          "Hot": false
-        },
-        {
-          "Name": "GitLab CI, GitHub Actions",
-          "Hot": false
-        }
+        { "Name": "Linux (Debian), Windows, macOS" },
+        { "Name": "Docker, ZFS, sauvegardes" },
+        { "Name": "GitLab CI, GitHub Actions" }
       ]
     },
     {
-      "Area": "Développement web",
+      "Area": "Web",
       "SkillSet": [
-        {
-          "Name": "JavaScript, React",
-          "Hot": true
-        },
-        {
-          "Name": "Python (FastAPI)",
-          "Hot": false
-        },
-        {
-          "Name": "SQL (MySQL, PostgreSQL), MongoDB",
-          "Hot": false
-        },
-        {
-          "Name": "HTML, CSS, PHP, WordPress",
-          "Hot": false
-        }
+        { "Name": "JavaScript, React" },
+        { "Name": "Python" },
+        { "Name": "SQL, PHP, HTML, CSS" }
       ]
     },
     {
-      "Area": "Multimédia",
+      "Area": "Image et son",
       "SkillSet": [
-        {
-          "Name": "Photoshop, Illustrator, Premiere, After Effects",
-          "Hot": false
-        },
-        {
-          "Name": "Pro Tools, Sound Forge : enregistrement et montage",
-          "Hot": false
-        },
-        {
-          "Name": "3ds Max, Poser, Vue d'Esprit",
-          "Hot": false
-        }
-      ]
-    },
-    {
-      "Area": "Formation et langues",
-      "SkillSet": [
-        {
-          "Name": "1997-1999 : niveau BTS Électrotechnique – Vienne",
-          "Hot": false
-        },
-        {
-          "Name": "1995-1997 : bac technologique Électrotechnique – Valence",
-          "Hot": false
-        },
-        {
-          "Name": "1993-1995 : CAP/BEP Électrotechnique – Crest",
-          "Hot": false
-        },
-        {
-          "Name": "Certifications EBP et Sage Batigest SQL",
-          "Hot": true
-        },
-        {
-          "Name": "Formations internes : Saint-Gobain, Bell Sympatico, Inforoutes de l'Ardèche",
-          "Hot": false
-        },
-        {
-          "Name": "CACES 1, 3 et 5 ; permis B",
-          "Hot": false
-        },
-        {
-          "Name": "Français (langue maternelle), anglais professionnel (3 ans à Montréal)",
-          "Hot": false
-        }
+        { "Name": "Photoshop, Illustrator, Premiere" },
+        { "Name": "Pro Tools, Sound Forge" }
       ]
     }
   ],
-  "Stats": [
-    {
-      "value": "25 ans",
-      "label": "entre informatique, formation et relation client"
-    },
-    {
-      "value": "10 postes",
-      "label": "de l'Ardèche à Montréal"
-    },
-    {
-      "value": "3 ans",
-      "label": "de hotline au Québec, en anglais et en français"
-    },
-    {
-      "value": "2 certifications",
-      "label": "Sage Batigest SQL et EBP"
-    }
+  "Education": [
+    "1997-1999 : niveau BTS électrotechnique, Vienne",
+    "1995-1997 : bac technologique électrotechnique, Valence",
+    "1993-1995 : CAP/BEP électrotechnique, Crest",
+    "Certifications Sage Batigest SQL et EBP",
+    "Formations internes Saint-Gobain, Bell Sympatico, Inforoutes de l'Ardèche"
+  ],
+  "Extras": [
+    "Anglais professionnel (trois ans à Montréal)",
+    "Permis B, CACES 1, 3 et 5"
   ],
   "Projects": [
     {
       "name": "Fring",
       "url": "https://fring.sevan.zone",
-      "tags": [
-        "Node.js",
-        "PostgreSQL",
-        "IA",
-        "Docker"
-      ],
-      "description": "Application gratuite de garde-robe : on photographie ses vêtements, on compose ses tenues et on suit ce qu'on porte vraiment. Analyse des photos par IA, sur PC et mobile."
+      "description": "application de garde-robe gratuite, avec reconnaissance des vêtements par IA."
     },
     {
-      "name": "Serveur maison",
+      "name": "Serveur familial",
       "url": "",
-      "tags": [
-        "Debian",
-        "Docker",
-        "ZFS",
-        "GitLab CI"
-      ],
-      "description": "Un serveur que j'administre seul pour la famille : un million de photos, documents numérisés et classés automatiquement, films et séries, sauvegardes vérifiées et copies hors machine, déploiement automatique de mes sites."
+      "description": "photos, documents, films et sauvegardes, sous Debian et Docker, que j'administre seul."
     },
     {
       "name": "sevan.zone",
       "url": "https://sevan.zone",
-      "tags": [
-        "Astro",
-        "Rust",
-        "Blog"
-      ],
-      "description": "Mon site personnel : une vingtaine de projets en ligne et un blog sur l'auto-hébergement et le développement."
+      "description": "mon site, avec mes autres projets et un blog."
     },
     {
       "name": "NoCarbono",
       "url": "https://nocarbono.sevan.zone",
-      "tags": [
-        "WordPress",
-        "PHP"
-      ],
-      "description": "Calculateur de bilan carbone personnel : transport, alimentation, logement, consommation, à partir des données de l'ADEME."
+      "description": "calculateur de bilan carbone personnel."
     },
     {
-      "name": "Linetime et Zone API",
-      "url": "https://sevan.zone/projets/",
-      "tags": [
-        "Rust",
-        "Go",
-        "PostgreSQL"
-      ],
-      "description": "Suivi du temps de travail par projet, sur une API en Rust (Axum) ; la même API réécrite en Go, Lua, Crystal et C++ pour comparer les langages."
-    },
-    {
-      "name": "Articles au Portugal",
+      "name": "Articles",
       "url": "",
-      "tags": [
-        "Écriture"
-      ],
-      "description": "Articles d'opinion écrits en 2026 pour des médias portugais (Roupeiro.pt, The Next Big Idea), autour de la garde-robe raisonnée."
+      "description": "deux articles d'opinion pour des médias portugais (Roupeiro.pt, The Next Big Idea), 2026."
     }
   ],
-  "Now": {
-    "updated": "novembre 2026",
-    "items": [
-      "Support Odoo chez Herbarom, à Valence.",
-      "Fring : nouvelles fonctions et référencement de l'application.",
-      "Deux articles d'opinion pour des médias portugais, sur la garde-robe raisonnée.",
-      "Mon serveur maison : migration terminée, sauvegardes doublées hors machine."
-    ]
-  },
-  "Offer": [
-    {
-      "title": "Des utilisateurs autonomes",
-      "text": "Vingt ans à former des adultes : je rends un logiciel simple pour ceux qui s'en servent tous les jours."
-    },
-    {
-      "title": "Un ERP qui tourne",
-      "text": "Support, paramétrage et migrations sur Odoo, Sage et EBP, avec le souci des données et des sauvegardes."
-    },
-    {
-      "title": "Le sens du client",
-      "text": "Dix ans de vente technique et trois ans de hotline : écouter, reformuler, résoudre, rappeler."
-    }
-  ]
+  "Interests": "voyages, kayak, photographie, jeux, tricot."
 }
