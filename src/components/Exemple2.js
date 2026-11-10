@@ -12,6 +12,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import logos from './logos';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -28,6 +29,20 @@ const useStyles = makeStyles((theme) => ({
 		},
 	  },
 	},
+	details: {
+		textAlign: 'left',
+		paddingLeft: '20px',
+		margin: 0,
+	},
+	logo: {
+		maxHeight: '48px',
+		maxWidth: '180px',
+		objectFit: 'contain',
+		background: '#fff',
+		padding: '6px 10px',
+		borderRadius: '6px',
+		marginBottom: '6px',
+	},
 	secondaryTail: {
 	  backgroundColor: theme.palette.secondary.main,
 	},
@@ -42,8 +57,16 @@ const Exemple2 = ({ title, experiences }) => {
 			{experiences.map((experience, i) => (
 				<TimelineItem key={`experience-${i}`}>
 					<TimelineOppositeContent>
+							{logos[experience.logo] && (
+								<a href={experience.url || undefined} target="_blank" rel="noopener noreferrer">
+									<img className={classes.logo} style={experience.logoBg ? { background: experience.logoBg } : undefined} src={logos[experience.logo]} alt={experience.companyName} />
+								</a>
+							)}
+							<Typography variant="subtitle1" color="textPrimary">
+								{experience.companyName}
+							</Typography>
 							<Typography variant="body2" color="textSecondary">
-							<span>{experience.companyName}</span>
+								{experience.about}
 							</Typography>
 						</TimelineOppositeContent>
 					<TimelineSeparator>
@@ -63,6 +86,11 @@ const Exemple2 = ({ title, experiences }) => {
 									<span> {role.endDate}</span> 
 									<br /><span>{role.location}</span>
 									<p>{role.description}</p>
+									{role.details && (
+										<ul className={classes.details}>
+											{role.details.map((detail, j) => <li key={`detail-${j}`}>{detail}</li>)}
+										</ul>
+									)}
 								</Grid>
 							</Paper>
 						</TimelineContent>
@@ -82,11 +110,14 @@ Exemple2.propTypes = {
 		PropTypes.shape({
 			companyName: PropTypes.string,
 			logo: PropTypes.string,
+			about: PropTypes.string,
+			logoBg: PropTypes.string,
 			url: PropTypes.string,
 			roles: PropTypes.arrayOf(
 				PropTypes.shape({
 					title: PropTypes.string,
 					description: PropTypes.string,
+					details: PropTypes.arrayOf(PropTypes.string),
 					startDate: PropTypes.string,
 					endDate: PropTypes.string,
 					location: PropTypes.string,
