@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import Bandeau from './bandeau';
-import Lpage from '../img/Lpage.png';
+import Lpage from '../img/Lpage.webp';
 import Text from './Text';
 import data from '../data';
 
@@ -61,6 +61,14 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
         height: 'auto',
         display: 'block',
+    },
+    srOnly: {
+        position: 'absolute',
+        width: 1,
+        height: 1,
+        overflow: 'hidden',
+        clip: 'rect(0 0 0 0)',
+        whiteSpace: 'nowrap',
     },
     tv: {
         display: 'block',
@@ -179,9 +187,9 @@ const Home = ({ onNavigate, onOpenTerminal, pdfUrl }) => {
                     </div>
                 </div>
                 <div className={classes.illustration}>
-                    <ButtonBase className={classes.tv} onClick={onOpenTerminal} focusRipple
-                        aria-label="Ouvrir le terminal" title="Ouvrir le terminal">
-                        <img className={classes.image} src={Lpage} alt="" />
+                    <ButtonBase className={classes.tv} onClick={onOpenTerminal} focusRipple title="Ouvrir le terminal">
+                        <span className={classes.srOnly}>Ouvrir le terminal</span>
+                        <img className={classes.image} src={Lpage} alt="" width="1024" height="768" />
                         <Text />
                     </ButtonBase>
                     <Typography variant="body2" color="textSecondary" className={classes.hint}>

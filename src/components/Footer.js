@@ -18,9 +18,9 @@ const Footer = () => {
         <footer className={classes.root}>
             <Typography variant="body2" color="textSecondary">
                 Site construit en React à partir du code de mon dépôt GitHub{' '}
-                <Link href="https://github.com/Sevangmb/cv" target="_blank" rel="noopener noreferrer">Sevangmb/cv</Link>,
+                <Link underline="always" href="https://github.com/Sevangmb/cv" target="_blank" rel="noopener noreferrer">Sevangmb/cv</Link>,
                 hébergé à l'origine sur{' '}
-                <Link href="https://sevangmb.github.io/cv/" target="_blank" rel="noopener noreferrer">GitHub Pages</Link>,
+                <Link underline="always" href="https://sevangmb.github.io/cv/" target="_blank" rel="noopener noreferrer">GitHub Pages</Link>,
                 et aujourd'hui sur mon propre serveur.
             </Typography>
             <Typography variant="caption" color="textSecondary" component="p" style={{ marginTop: 6 }}>

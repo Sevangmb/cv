@@ -8,7 +8,7 @@ const makeTheme = dark => createTheme({
       ? { default: '#162022', paper: '#1f2c2e' }
       : { default: '#f4f6ff', paper: '#ffffff' },
     primary: {
-      main: dark ? '#7fbcbd' : '#4f8a8b',
+      main: dark ? '#7fbcbd' : '#3a6e6f',
     },
     secondary: {
       main: '#ffcb74',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Me from '../img/me.png';
+import Me from '../img/me.webp';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
         height: '25px',
     },
     first: {
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: '#4f8a8b',
         height: '50px',
     },
     image: {
@@ -50,7 +50,7 @@ const Bandeau = () => {
             <div className={`${classes.stripe} ${classes.second}`} />
             <div className={`${classes.stripe} ${classes.fourth}`} />
             <div className={`${classes.stripe} ${classes.first}`} />
-            <img className={classes.image} src={Me} alt="Sevan Safarian" />
+            <img className={classes.image} src={Me} alt="Sevan Safarian" width="170" height="217" />
             <div className={classes.spacer} />
         </div>
     );
