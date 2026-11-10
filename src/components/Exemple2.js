@@ -10,6 +10,7 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import WorkIcon from '@material-ui/icons/Work';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Chip from '@material-ui/core/Chip';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import logos from './logos';
@@ -45,6 +46,28 @@ const useStyles = makeStyles(theme => ({
 	roleTitle: {
 		fontWeight: 600,
 	},
+	// En-tête façon ticket de support : un clin d'œil au métier.
+	ticket: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'space-between',
+		gap: 8,
+		fontFamily: 'monospace',
+		fontSize: 12,
+		color: theme.palette.text.secondary,
+		borderBottom: `1px dashed ${theme.palette.divider}`,
+		paddingBottom: 6,
+		marginBottom: 8,
+	},
+	open: {
+		background: theme.palette.secondary.main,
+		color: '#3b2a00',
+		fontWeight: 600,
+	},
+	closed: {
+		background: theme.palette.primary.main,
+		color: '#fff',
+	},
 	meta: {
 		color: theme.palette.text.secondary,
 	},
@@ -78,8 +101,16 @@ const Company = ({ experience, classes }) => (
 	</div>
 );
 
-const Role = ({ role, classes }) => (
+const ticketNumber = (role, company) =>
+	`#${(role.startDate.match(/\d{4}/) || [''])[0]}-${company.replace(/[^A-Za-z]/g, '').slice(0, 4).toUpperCase()}`;
+
+const Role = ({ role, company, classes }) => (
 	<Paper className={classes.paper}>
+		<div className={classes.ticket}>
+			<span>Ticket {ticketNumber(role, company)}</span>
+			<Chip size="small" label={role.status === 'En cours' ? 'En cours' : 'Résolu ✔'}
+				className={role.status === 'En cours' ? classes.open : classes.closed} />
+		</div>
 		<Typography variant="h6" component="h3" className={classes.roleTitle}>{role.title}</Typography>
 		<Typography variant="body2" className={classes.meta}>
 			{role.startDate} – {role.endDate} · {role.location}
@@ -120,7 +151,7 @@ const Exemple2 = ({ title, experiences }) => {
 						<TimelineContent>
 							{narrow && <Company experience={experience} classes={classes} />}
 							{experience.roles.map((role, j) => (
-								<Role key={`role-${j}`} role={role} classes={classes} />
+								<Role key={`role-${j}`} role={role} company={experience.companyName} classes={classes} />
 							))}
 						</TimelineContent>
 					</TimelineItem>
@@ -149,6 +180,7 @@ Exemple2.propTypes = {
 					details: PropTypes.arrayOf(PropTypes.string),
 					startDate: PropTypes.string,
 					endDate: PropTypes.string,
+					status: PropTypes.string,
 					location: PropTypes.string,
 				})
 			),

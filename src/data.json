@@ -27,7 +27,8 @@
             "Paramétrage, évolutions et suivi des incidents avec les utilisateurs.",
             "Formation et accompagnement des utilisateurs.",
             "Sensibilisation à la cybersécurité (2026)."
-          ]
+          ],
+          "status": "En cours"
         }
       ]
     },
@@ -48,7 +49,8 @@
             "Installation, migration et paramétrage des dossiers.",
             "Support utilisateurs et dépannage.",
             "Certification EBP."
-          ]
+          ],
+          "status": "Résolu"
         }
       ],
       "logoBg": "#1f2a44"
@@ -69,7 +71,8 @@
             "Formation, installation, migration et paramétrage des logiciels Sage, EBP et Codial.",
             "Support et dépannage auprès des clients TPE et PME.",
             "Certification Sage Batigest SQL ; formations internes Sage 50c et Codial."
-          ]
+          ],
+          "status": "Résolu"
         }
       ]
     },
@@ -89,7 +92,8 @@
             "Accueil et conseil des artisans et particuliers au comptoir libre-service.",
             "Gestion du magasin, réceptions et stock.",
             "Devis, commandes et SAV en plomberie, sanitaire et chauffage."
-          ]
+          ],
+          "status": "Résolu"
         }
       ]
     },
@@ -108,7 +112,8 @@
           "details": [
             "Accueil en salle d'exposition et conception de salles de bain.",
             "Devis, commandes et SAV."
-          ]
+          ],
+          "status": "Résolu"
         },
         {
           "title": "Attaché technico-commercial",
@@ -121,7 +126,8 @@
             "Suivi des commandes fournisseurs et clients, chiffrages et litiges.",
             "Formations internes Saint-Gobain : suivi client, sanitaire, techniques de vente, styles et tendances.",
             "CACES 1, 3 et 5."
-          ]
+          ],
+          "status": "Résolu"
         }
       ]
     },
@@ -142,7 +148,8 @@
             "Support technique internet et SAV : Freedom, MSN, réseau domestique, Wi-Fi.",
             "Vente de connexions internet, de logiciels et de matériel.",
             "Outils : Remedy, Lantern, Shots, IAF."
-          ]
+          ],
+          "status": "Résolu"
         }
       ]
     },
@@ -164,7 +171,8 @@
             "Exposition multimédia pour les 20 ans de la radio.",
             "Interviews (artistes, enfants, élus), accompagnement des enfants pour leurs émissions.",
             "Enregistrements en studio et en extérieur, montage."
-          ]
+          ],
+          "status": "Résolu"
         }
       ]
     },
@@ -182,9 +190,10 @@
             "Dépannage, configuration, installation matérielle et logicielle, réseaux.",
             "Installation, entretien et dépannage de photocopieurs, imprimantes et fax."
           ],
-          "startDate": "novembre 2004",
-          "endDate": "novembre 2004",
-          "location": "Aubenas (07)"
+          "startDate": "11/2004",
+          "endDate": "11/2004",
+          "location": "Aubenas (07)",
+          "status": "Résolu"
         }
       ]
     },
@@ -207,7 +216,8 @@
             "Création de sites web : office du tourisme Au Cœur de l'Ardèche, Comité de Pays, annuaire des associations.",
             "Animation : visioconférences sur 8 sites, semaines multi-activités avec un centre aéré, journal trimestriel de l'école primaire.",
             "Partenariat avec les Inforoutes de l'Ardèche (formation routeurs Cisco, web et législation)."
-          ]
+          ],
+          "status": "Résolu"
         }
       ]
     }
@@ -325,6 +335,85 @@
           "Hot": false
         }
       ]
+    }
+  ],
+  "Stats": [
+    {
+      "value": "25 ans",
+      "label": "entre informatique, formation et relation client"
+    },
+    {
+      "value": "10 postes",
+      "label": "de l'Ardèche à Montréal"
+    },
+    {
+      "value": "3 ans",
+      "label": "de hotline au Québec, en anglais et en français"
+    },
+    {
+      "value": "2 certifications",
+      "label": "Sage Batigest SQL et EBP"
+    }
+  ],
+  "Projects": [
+    {
+      "name": "Fring",
+      "url": "https://fring.sevan.zone",
+      "tags": [
+        "Node.js",
+        "PostgreSQL",
+        "IA",
+        "Docker"
+      ],
+      "description": "Application gratuite de garde-robe : on photographie ses vêtements, on compose ses tenues et on suit ce qu'on porte vraiment. Analyse des photos par IA, sur PC et mobile."
+    },
+    {
+      "name": "Serveur maison",
+      "url": "",
+      "tags": [
+        "Debian",
+        "Docker",
+        "ZFS",
+        "GitLab CI"
+      ],
+      "description": "Un serveur que j'administre seul pour la famille : un million de photos, documents numérisés et classés automatiquement, films et séries, sauvegardes vérifiées et copies hors machine, déploiement automatique de mes sites."
+    },
+    {
+      "name": "sevan.zone",
+      "url": "https://sevan.zone",
+      "tags": [
+        "Astro",
+        "Rust",
+        "Blog"
+      ],
+      "description": "Mon site personnel : une vingtaine de projets en ligne et un blog sur l'auto-hébergement et le développement."
+    },
+    {
+      "name": "NoCarbono",
+      "url": "https://nocarbono.sevan.zone",
+      "tags": [
+        "WordPress",
+        "PHP"
+      ],
+      "description": "Calculateur de bilan carbone personnel : transport, alimentation, logement, consommation, à partir des données de l'ADEME."
+    },
+    {
+      "name": "Linetime et Zone API",
+      "url": "https://sevan.zone/projets/",
+      "tags": [
+        "Rust",
+        "Go",
+        "PostgreSQL"
+      ],
+      "description": "Suivi du temps de travail par projet, sur une API en Rust (Axum) ; la même API réécrite en Go, Lua, Crystal et C++ pour comparer les langages."
+    },
+    {
+      "name": "Articles au Portugal",
+      "url": "",
+      "tags": [
+        "Écriture"
+      ],
+      "description": "Articles d'opinion écrits en 2026 pour des médias portugais (Roupeiro.pt, The Next Big Idea), autour de la garde-robe raisonnée."
     }
   ]
 }
