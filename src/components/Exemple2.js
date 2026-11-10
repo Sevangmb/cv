@@ -11,6 +11,8 @@ import WorkIcon from '@material-ui/icons/Work';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
+import Button from '@material-ui/core/Button';
+import GetAppIcon from '@material-ui/icons/GetApp';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import logos from './logos';
@@ -75,6 +77,16 @@ const useStyles = makeStyles(theme => ({
 		margin: theme.spacing(1, 0, 0),
 		paddingLeft: theme.spacing(2.5),
 	},
+	tags: {
+		display: 'flex',
+		flexWrap: 'wrap',
+		gap: 6,
+		marginTop: theme.spacing(1.5),
+	},
+	full: {
+		textAlign: 'center',
+		marginTop: theme.spacing(2),
+	},
 	logo: {
 		maxHeight: 48,
 		maxWidth: 180,
@@ -123,10 +135,15 @@ const Role = ({ role, company, classes }) => (
 				))}
 			</ul>
 		)}
+		{role.tags && (
+			<div className={classes.tags}>
+				{role.tags.map(tag => <Chip key={tag} label={tag} size="small" variant="outlined" />)}
+			</div>
+		)}
 	</Paper>
 );
 
-const Exemple2 = ({ title, experiences }) => {
+const Exemple2 = ({ title, experiences, pdfUrl }) => {
 	const classes = useStyles();
 	const theme = useTheme();
 	const narrow = useMediaQuery(theme.breakpoints.down('sm'));
@@ -157,6 +174,14 @@ const Exemple2 = ({ title, experiences }) => {
 					</TimelineItem>
 				))}
 			</Timeline>
+			{pdfUrl && (
+				<div className={classes.full}>
+					<Button variant="contained" color="primary" startIcon={<GetAppIcon />}
+						href={pdfUrl} target="_blank" rel="noopener noreferrer">
+						Voir le CV complet (PDF)
+					</Button>
+				</div>
+			)}
 		</div>
 	);
 };
@@ -181,6 +206,7 @@ Exemple2.propTypes = {
 					startDate: PropTypes.string,
 					endDate: PropTypes.string,
 					status: PropTypes.string,
+					tags: PropTypes.arrayOf(PropTypes.string),
 					location: PropTypes.string,
 				})
 			),

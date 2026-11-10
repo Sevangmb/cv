@@ -28,7 +28,13 @@
             "Formation et accompagnement des utilisateurs.",
             "Sensibilisation à la cybersécurité (2026)."
           ],
-          "status": "En cours"
+          "status": "En cours",
+          "tags": [
+            "Odoo",
+            "ERP",
+            "Support N1/N2",
+            "Formation"
+          ]
         }
       ]
     },
@@ -50,7 +56,13 @@
             "Support utilisateurs et dépannage.",
             "Certification EBP."
           ],
-          "status": "Résolu"
+          "status": "Résolu",
+          "tags": [
+            "EBP",
+            "Comptabilité",
+            "Migration",
+            "Formation"
+          ]
         }
       ],
       "logoBg": "#1f2a44"
@@ -72,7 +84,13 @@
             "Support et dépannage auprès des clients TPE et PME.",
             "Certification Sage Batigest SQL ; formations internes Sage 50c et Codial."
           ],
-          "status": "Résolu"
+          "status": "Résolu",
+          "tags": [
+            "Sage",
+            "EBP",
+            "Codial",
+            "Formation"
+          ]
         }
       ]
     },
@@ -93,7 +111,13 @@
             "Gestion du magasin, réceptions et stock.",
             "Devis, commandes et SAV en plomberie, sanitaire et chauffage."
           ],
-          "status": "Résolu"
+          "status": "Résolu",
+          "tags": [
+            "Plomberie",
+            "Chauffage",
+            "Devis",
+            "Stock"
+          ]
         }
       ]
     },
@@ -113,7 +137,12 @@
             "Accueil en salle d'exposition et conception de salles de bain.",
             "Devis, commandes et SAV."
           ],
-          "status": "Résolu"
+          "status": "Résolu",
+          "tags": [
+            "Salles de bain",
+            "Devis",
+            "SAV"
+          ]
         },
         {
           "title": "Attaché technico-commercial",
@@ -127,7 +156,13 @@
             "Formations internes Saint-Gobain : suivi client, sanitaire, techniques de vente, styles et tendances.",
             "CACES 1, 3 et 5."
           ],
-          "status": "Résolu"
+          "status": "Résolu",
+          "tags": [
+            "Grands comptes",
+            "Chiffrage",
+            "Saint-Gobain",
+            "CACES"
+          ]
         }
       ]
     },
@@ -149,7 +184,13 @@
             "Vente de connexions internet, de logiciels et de matériel.",
             "Outils : Remedy, Lantern, Shots, IAF."
           ],
-          "status": "Résolu"
+          "status": "Résolu",
+          "tags": [
+            "Hotline",
+            "Bell Sympatico",
+            "Remedy",
+            "Anglais"
+          ]
         }
       ]
     },
@@ -172,7 +213,13 @@
             "Interviews (artistes, enfants, élus), accompagnement des enfants pour leurs émissions.",
             "Enregistrements en studio et en extérieur, montage."
           ],
-          "status": "Résolu"
+          "status": "Résolu",
+          "tags": [
+            "Sphinx",
+            "Vidéo",
+            "Son",
+            "Animation"
+          ]
         }
       ]
     },
@@ -193,7 +240,12 @@
           "startDate": "11/2004",
           "endDate": "11/2004",
           "location": "Aubenas (07)",
-          "status": "Résolu"
+          "status": "Résolu",
+          "tags": [
+            "Matériel",
+            "Réseaux",
+            "Imprimantes"
+          ]
         }
       ]
     },
@@ -217,7 +269,13 @@
             "Animation : visioconférences sur 8 sites, semaines multi-activités avec un centre aéré, journal trimestriel de l'école primaire.",
             "Partenariat avec les Inforoutes de l'Ardèche (formation routeurs Cisco, web et législation)."
           ],
-          "status": "Résolu"
+          "status": "Résolu",
+          "tags": [
+            "Formation",
+            "Sites web",
+            "Cisco",
+            "Visioconférence"
+          ]
         }
       ]
     }
@@ -414,6 +472,29 @@
         "Écriture"
       ],
       "description": "Articles d'opinion écrits en 2026 pour des médias portugais (Roupeiro.pt, The Next Big Idea), autour de la garde-robe raisonnée."
+    }
+  ],
+  "Now": {
+    "updated": "novembre 2026",
+    "items": [
+      "Support Odoo chez Herbarom, à Valence.",
+      "Fring : nouvelles fonctions et référencement de l'application.",
+      "Deux articles d'opinion pour des médias portugais, sur la garde-robe raisonnée.",
+      "Mon serveur maison : migration terminée, sauvegardes doublées hors machine."
+    ]
+  },
+  "Offer": [
+    {
+      "title": "Des utilisateurs autonomes",
+      "text": "Vingt ans à former des adultes : je rends un logiciel simple pour ceux qui s'en servent tous les jours."
+    },
+    {
+      "title": "Un ERP qui tourne",
+      "text": "Support, paramétrage et migrations sur Odoo, Sage et EBP, avec le souci des données et des sauvegardes."
+    },
+    {
+      "title": "Le sens du client",
+      "text": "Dix ans de vente technique et trois ans de hotline : écouter, reformuler, résoudre, rappeler."
     }
   ]
 }

@@ -23,6 +23,10 @@ const Footer = () => {
                 <Link href="https://sevangmb.github.io/cv/" target="_blank" rel="noopener noreferrer">GitHub Pages</Link>,
                 et aujourd'hui sur mon propre serveur.
             </Typography>
+            <Typography variant="caption" color="textSecondary" component="p" style={{ marginTop: 6 }}>
+                Fabriqué avec React et Material UI · servi par nginx derrière Traefik, sur un serveur Debian à Valence ·
+                essayez la télé de l'accueil, elle cache un terminal.
+            </Typography>
         </footer>
     );
 };

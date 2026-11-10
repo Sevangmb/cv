@@ -67,9 +67,43 @@ const HELP = [
     '  projets      ce que je construis à côté',
     '  contact      comment me joindre',
     '  pdf          télécharger mon CV en PDF',
+    '  stats        ma fiche de personnage',
     '  aller <onglet>  ouvrir un onglet (accueil, competences, parcours, projets, cv)',
     '  effacer      vider l’écran',
+    '',
+    'Vous pouvez aussi poser une question, par exemple :',
+    '  « tu connais Sage ? », « tu parles anglais ? », « tu as le permis ? »',
 ].join('\n');
+
+// Fiche de personnage façon jeu de rôle : un clin d'œil, pas une évaluation.
+const STATS = [
+    'SEVAN SAFARIAN — classe : Support / Formateur',
+    'Expérience : 25 ans · Base : Valence (Drôme)',
+    '',
+    'Pédagogie       ██████████  10',
+    'Patience        █████████░   9',
+    'Relation client █████████░   9',
+    'Odoo / Sage     ████████░░   8',
+    'Linux / Docker  ███████░░░   7',
+    'Anglais         ██████░░░░   6',
+    '',
+    'Objets : CACES 1-3-5, certifications Sage et EBP, un serveur maison.',
+    'Pouvoir spécial : rappeler le client quand c’est réglé.',
+].join('\n');
+
+// Questions libres : on cherche des mots-clés et on répond à partir du CV.
+const FAQ = [
+    [/odoo/, 'Oui : je fais le support et le paramétrage d’Odoo chez Herbarom depuis 2023.'],
+    [/sage|batigest|codial/, 'Oui : formation, installation et migration de Sage (certifié Batigest SQL), Sage 50c et Codial chez APE Conseil, de 2019 à 2021.'],
+    [/ebp/, 'Oui : je suis certifié EBP, que j’ai installé, migré et enseigné chez APE Conseil puis Axess Online (2019-2023).'],
+    [/anglais|english/, 'Oui : trois ans de hotline à Montréal, en anglais et en français, pour Bell Sympatico.'],
+    [/permis|voiture|caces/, 'Permis B, et CACES 1, 3 et 5.'],
+    [/\bou\b|habite|ville|valence|region/, 'Je vis à Valence, dans la Drôme.'],
+    [/linux|docker|serveur|debian/, 'Oui : j’administre seul un serveur Debian avec Docker, ZFS et une intégration continue GitLab.'],
+    [/formation|former|enseign/, 'C’est le fil rouge de mon parcours : vingt ans à former des adultes, des mairies de l’Ardèche aux utilisateurs d’ERP.'],
+    [/diplome|etude|bts|bac/, 'Bac technologique puis niveau BTS en électrotechnique (1995-1999), complétés par des certifications Sage et EBP.'],
+    [/contact|joindre|mail|telephone/, `Le plus simple : un message sur LinkedIn (${linkedin}).`],
+];
 
 const answer = (raw, actions) => {
     const cmd = raw.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
@@ -108,7 +142,10 @@ const answer = (raw, actions) => {
         }
         return `Onglet inconnu : ${tab}`;
     }
-    return `Commande inconnue : ${raw.trim()}. Tapez « aide ».`;
+    if (cmd === 'stats') return STATS;
+    const faq = FAQ.find(([motif]) => motif.test(cmd));
+    if (faq) return faq[1];
+    return `Je n’ai pas compris « ${raw.trim()} ». Tapez « aide », ou posez une question sur mon parcours.`;
 };
 
 const WELCOME = 'Bienvenue sur le terminal de Sevan.\nTapez « aide » pour la liste des commandes.';

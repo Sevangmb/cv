@@ -44,13 +44,16 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <a className="skip-link" href="#contenu">Aller au contenu</a>
       <CenteredTabs current={currentTab} onChange={onChangeTab} dark={dark} onToggleDark={toggleDark} />
 
+      <main id="contenu" tabIndex={-1} style={{ outline: 'none' }}>
       {currentTab === 0 && (<Home onNavigate={setCurrentTab} onOpenTerminal={() => setTerminalOpen(true)} pdfUrl={PDF_URL} />)}
       {currentTab === 1 && (<Competences />)}
-      {currentTab === 2 && (<Exemple2 title="Parcours" experiences={data.Experiences} />)}
+      {currentTab === 2 && (<Exemple2 title="Parcours" experiences={data.Experiences} pdfUrl={PDF_URL} />)}
       {currentTab === 3 && (<Projets />)}
       {currentTab === 4 && (<Cv pdfUrl={PDF_URL} />)}
+      </main>
       <Footer />
       <Terminal open={terminalOpen} onClose={() => setTerminalOpen(false)}
         onNavigate={setCurrentTab} pdfUrl={PDF_URL} />
