@@ -29,11 +29,10 @@ export default function CenteredTabs({ current, onChange }) {
         textColor="primary"
         centered
       >
-        <Tab label="Home" />
-        <Tab label="Competences" />
-        <Tab label="Experience" />
-        <Tab label="Cv" />
-        <Tab label="Pedroflix" />
+        <Tab label="Accueil" />
+        <Tab label="Compétences" />
+        <Tab label="Parcours" />
+        <Tab label="CV" />
       </Tabs>
     </Paper>
   );

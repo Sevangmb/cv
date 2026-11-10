@@ -1,108 +1,162 @@
 {
     "SocialMedias": [
       {
-        "icon": "github",
-        "url": "https://github.com/Sevangmb/cv"
-      },
-      {
-        "icon": "facebook",
-        "url": "https://www.facebook.com/"
-      },
-      {
         "icon": "linkedin",
         "url": "https://www.linkedin.com/in/sevan-safarian-92217490"
+      },
+      {
+        "icon": "github",
+        "url": "https://github.com/Sevangmb"
       }
     ],
     "Experiences": [
       {
-        "companyName": "Tereva",
-        "logo": "https://picsum.photos/100?random=1",
-        "url": "https://www.tereva.fr/",
+        "companyName": "Herbarom Laboratoire",
+        "url": "",
         "roles": [
           {
-            "title": "Vendeur conseil",
-            "description": "Accueil, gestion du magasin, devis, commandes, SAV plomberie, sanitaire, chauffage.",
-            "startDate": "2017",
-            "endDate": "2019",
-            "location": "Valence, France"
+            "title": "Chargé support logiciel (ERP Odoo)",
+            "description": "Support et paramétrage de l'ERP Odoo pour les services de l'entreprise : traitement des tickets, diagnostic, formation des utilisateurs, évolutions et suivi des incidents.",
+            "startDate": "2023",
+            "endDate": "aujourd'hui",
+            "location": "Valence (26)"
+          }
+        ]
+      },
+      {
+        "companyName": "Axess Online",
+        "url": "",
+        "roles": [
+          {
+            "title": "Technicien formateur logiciel",
+            "description": "Formation, installation, migration, paramétrage et support des logiciels de gestion et de comptabilité EBP.",
+            "startDate": "2021",
+            "endDate": "2023",
+            "location": "Valence (26)"
           }
         ]
       },
       {
         "companyName": "APE Conseil",
-        "logo": "https://picsum.photos/100?random=2",
-        "url": "https://www.google.com/",
+        "url": "",
         "roles": [
           {
-            "title": "UI Designer",
-            "description": "Design user-fridendly web page",
-            "startDate": "2016-05-01",
-            "endDate": "2016-09-01",
-            "location": "Lyon, France"
+            "title": "Technicien formateur logiciel",
+            "description": "Formation, installation, migration, paramétrage et support des logiciels de gestion Sage, EBP et Codial.",
+            "startDate": "2019",
+            "endDate": "2021",
+            "location": "Rillieux-la-Pape (69)"
           }
         ]
       },
       {
-        "companyName": "Axess",
-        "logo": "https://picsum.photos/100?random=3",
-        "url": "https://www.google.com/",
+        "companyName": "Téréva",
+        "url": "https://www.tereva.fr/",
         "roles": [
           {
-            "title": "UI Designer",
-            "description": "Design user-fridendly web page",
-            "startDate": "2016-05-01",
-            "endDate": "2016-09-01",
-            "location": "Valence, France"
+            "title": "Vendeur conseil libre-service",
+            "description": "Accueil, gestion du magasin, devis, commandes, SAV plomberie, sanitaire et chauffage.",
+            "startDate": "2017",
+            "endDate": "2019",
+            "location": "Valence (26)"
+          }
+        ]
+      },
+      {
+        "companyName": "Brossette",
+        "url": "",
+        "roles": [
+          {
+            "title": "Vendeur conseil exposition",
+            "description": "Accueil, conception de salles de bain, devis, commandes, SAV.",
+            "startDate": "2016",
+            "endDate": "2017",
+            "location": "Valence – Romans (26)"
+          },
+          {
+            "title": "Attaché technico-commercial",
+            "description": "Gestion d'un portefeuille clients (grands comptes et artisans), suivi des commandes, chiffrages et litiges.",
+            "startDate": "2008",
+            "endDate": "2016",
+            "location": "Valence (26)"
+          }
+        ]
+      },
+      {
+        "companyName": "Teleperformance",
+        "url": "",
+        "roles": [
+          {
+            "title": "Technicien hotline niveau 1",
+            "description": "Support technique internet (FAI Bell Sympatico), réseau domestique et Wi-Fi ; vente de connexions, logiciels et matériels.",
+            "startDate": "2005",
+            "endDate": "2008",
+            "location": "Montréal (Québec, Canada)"
+          }
+        ]
+      },
+      {
+        "companyName": "Radio INFO RC",
+        "url": "",
+        "roles": [
+          {
+            "title": "Assistant technicien",
+            "description": "Formation du personnel au logiciel de statistiques Sphinx, numérisation vidéo, enregistrements studio et extérieur, montage.",
+            "startDate": "2004",
+            "endDate": "2005",
+            "location": "Aubenas (07)"
+          }
+        ]
+      },
+      {
+        "companyName": "Comité de Pays Centre Ardèche",
+        "url": "",
+        "roles": [
+          {
+            "title": "Animateur NTIC",
+            "description": "Formation des particuliers, mairies, écoles et PME (Windows, Office, internet, création de sites web) ; dépannage, maintenance et réseau de 10 postes.",
+            "startDate": "2000",
+            "endDate": "2004",
+            "location": "Les Ollières-sur-Eyrieux (07)"
           }
         ]
       }
     ],
     "Skills": [
       {
-        "Area": "Software",
+        "Area": "Logiciels de gestion",
         "SkillSet": [
-          {
-            "Name": "Skype, Microsoft Teams, Basecamp",
-            "Hot": true
-          },
-          {
-            "Name": "Twitter, Reddit",
-            "Hot": false
-          },
-          {
-            "Name": "Adobe suite",
-            "Hot": false
-          },
-          {
-            "Name": "VScode, Atom",
-            "Hot": false
-          }
-
+          { "Name": "Odoo (support, paramétrage)", "Hot": true },
+          { "Name": "Sage (certifié Batigest SQL), Sage 50c", "Hot": true },
+          { "Name": "EBP (certifié), Codial", "Hot": true },
+          { "Name": "Formation des utilisateurs, migrations, reprise de données", "Hot": true }
         ]
       },
       {
-        "Area": "Web-Based Application Development",
+        "Area": "Systèmes et auto-hébergement",
         "SkillSet": [
-          {
-            "Name": "JavaScript (ES5, ES6)",
-            "Hot": true
-          },
-          {
-            "Name": "MongoDB",
-            "Hot": false
-          },
-          {
-            "Name": "HTML5",
-            "Hot": true
-          },
-          {
-            "Name": "CSS (SCSS/SASS)",
-            "Hot": true
-          },
-          {
-            "Name": "React js",
-            "Hot": true
-          }
+          { "Name": "Linux (Debian), Windows, macOS", "Hot": true },
+          { "Name": "Docker, Docker Compose, reverse proxy", "Hot": true },
+          { "Name": "ZFS, sauvegardes, supervision", "Hot": false },
+          { "Name": "GitLab CI, GitHub Actions", "Hot": false }
+        ]
+      },
+      {
+        "Area": "Développement web",
+        "SkillSet": [
+          { "Name": "JavaScript, React", "Hot": true },
+          { "Name": "Python (FastAPI)", "Hot": false },
+          { "Name": "SQL (MySQL, PostgreSQL), MongoDB", "Hot": false },
+          { "Name": "HTML, CSS, PHP, WordPress", "Hot": false }
+        ]
+      },
+      {
+        "Area": "Formation",
+        "SkillSet": [
+          { "Name": "1997-1999 : niveau BTS Électrotechnique – Vienne", "Hot": false },
+          { "Name": "1995-1997 : bac technologique Électrotechnique – Valence", "Hot": false },
+          { "Name": "Certifications EBP et Sage Batigest SQL", "Hot": false },
+          { "Name": "Anglais professionnel (3 ans à Montréal)", "Hot": false }
         ]
       }
     ]

@@ -26,14 +26,14 @@ const Competences = () => {
       <Grid container spacing={3}>
         <Grid item xs>
           <Item
-            title="Gestion "
-            content="Formation, dépannage, support, maj et migration des logiciels de gestions, et comptabilité Sage, Codial et EBP."
+            title="Logiciels de gestion"
+            content="Support, paramétrage, migration et formation sur les logiciels de gestion et de comptabilité : Odoo, Sage, EBP, Codial."
             image="https://media.istockphoto.com/photos/double-explosure-with-businesss-charts-of-graph-and-rows-of-coins-for-picture-id1051617040"
           />
         </Grid>
         <Grid item xs>
           <Item
-            title="Commerce "
+            title="Commerce"
             content="Gestion de portefeuille clients, suivi de commandes fournisseurs/clients, devis, suivi des litiges/SAV, gestion des réceptions/livraisons et de stock. "
             image="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
           />
@@ -41,21 +41,21 @@ const Competences = () => {
         <Grid item xs>
           <Item
             title="Support"
-            content="Gestion des appels, call flow, suivi des dossiers client, traitement des tickets, 	diagnostique et dépannage. "
+            content="Traitement des tickets, diagnostic et dépannage, suivi des dossiers clients, formation des utilisateurs."
             image="https://image.shutterstock.com/image-photo/smiling-friendly-female-callcenter-agent-600w-1175066677.jpg"
           />
         </Grid>
         <Grid item xs>
           <Item
             title="Informatique"
-            content="Windows, MacOS, Linux. MsOffice. Serveurs. SQL, PHP, CSS. Adobe."
+            content="Linux (Debian), Windows, macOS. Docker, sauvegardes ZFS, intégration continue. SQL, JavaScript/React, Python."
             image="https://as1.ftcdn.net/jpg/02/25/56/76/500_F_225567663_gPfQuBNATBPkZO8KEGl256xPqURL6cbd.jpg"
           />
         </Grid>
         <Grid item xs>
           <Item
-            title="World of warcraft"
-            content="Chasseur lvl 120. Donjon, raid. Metiers : cuisine, peche travail du cuir et depessage au max !"
+            title="Projets personnels"
+            content="Fring (fring.sevan.zone), application de garde-robe avec IA, et un serveur auto-hébergé : Docker, photos, documents, médias, sauvegardes."
             image="https://as1.ftcdn.net/jpg/02/97/41/58/500_F_297415844_RQplmtTHNTNBJC8Mo2NbIfmUo9J7B1FT.jpg"
           />
         </Grid>
