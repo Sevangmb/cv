@@ -5,6 +5,17 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 const useStyles = makeStyles((theme) => ({
+  // Sur téléphone, les quatre onglets doivent tenir sur une ligne sans défilement.
+  tabs: {
+    [theme.breakpoints.down('xs')]: {
+      '& .MuiTab-root': {
+        minWidth: 0,
+        padding: '6px 6px',
+        fontSize: '0.72rem',
+        flex: 1,
+      },
+    },
+  },
   paper: {
       boxShadow: 'none',
       background: theme.palette.background.default,
@@ -23,6 +34,7 @@ export default function CenteredTabs({ current, onChange }) {
   return (
     <Paper className={classes.paper}>
       <Tabs
+        className={classes.tabs}
         value={current}
         onChange={handleChange}
         indicatorColor="primary"

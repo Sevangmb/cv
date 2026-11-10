@@ -1,67 +1,77 @@
-import Item from './Item';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
+import StorefrontIcon from '@material-ui/icons/Storefront';
+import HeadsetMicIcon from '@material-ui/icons/HeadsetMic';
+import ComputerIcon from '@material-ui/icons/Computer';
+import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
+import SchoolIcon from '@material-ui/icons/School';
+import Item from './Item';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
+    maxWidth: 1200,
+    margin: '0 auto',
+    padding: theme.spacing(4, 2),
+    overflowX: 'hidden',
   },
-  paper: {
-    padding: theme.spacing(6),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-  control: {
-  padding: theme.spacing(2),
+  heading: {
+    marginBottom: theme.spacing(3),
+    color: theme.palette.primary.main,
   },
 }));
 
+const cards = [
+  {
+    icon: AccountBalanceIcon,
+    title: 'Logiciels de gestion',
+    content: 'Support, paramétrage, migration et formation sur les logiciels de gestion et de comptabilité : Odoo, Sage (certifié Batigest SQL), EBP (certifié), Codial.',
+  },
+  {
+    icon: HeadsetMicIcon,
+    title: 'Support',
+    content: 'Traitement des tickets, diagnostic et dépannage, suivi des dossiers clients, hotline (Bell Sympatico à Montréal), formation des utilisateurs.',
+  },
+  {
+    icon: StorefrontIcon,
+    title: 'Commerce',
+    content: 'Portefeuille clients (grands comptes et artisans), devis et chiffrages, suivi des commandes fournisseurs et clients, litiges et SAV, réceptions et stock.',
+  },
+  {
+    icon: ComputerIcon,
+    title: 'Informatique',
+    content: 'Linux (Debian), Windows, macOS. Docker, sauvegardes ZFS, intégration continue. SQL, JavaScript/React, Python, PHP.',
+  },
+  {
+    icon: SchoolIcon,
+    title: 'Formation',
+    content: 'Vingt ans de formation d\'adultes : utilisateurs de logiciels de gestion, particuliers, mairies, offices du tourisme, PME.',
+  },
+  {
+    icon: EmojiObjectsIcon,
+    title: 'Projets personnels',
+    content: 'Fring (fring.sevan.zone), application de garde-robe avec IA, et un serveur auto-hébergé : Docker, photos, documents, médias, sauvegardes.',
+  },
+];
+
 const Competences = () => {
-
   const classes = useStyles();
-
   return (
     <div className={classes.root}>
+      <Typography variant="h4" component="h1" className={classes.heading}>
+        Compétences
+      </Typography>
       <Grid container spacing={3}>
-        <Grid item xs>
-          <Item
-            title="Logiciels de gestion"
-            content="Support, paramétrage, migration et formation sur les logiciels de gestion et de comptabilité : Odoo, Sage, EBP, Codial."
-            image="https://media.istockphoto.com/photos/double-explosure-with-businesss-charts-of-graph-and-rows-of-coins-for-picture-id1051617040"
-          />
-        </Grid>
-        <Grid item xs>
-          <Item
-            title="Commerce"
-            content="Gestion de portefeuille clients, suivi de commandes fournisseurs/clients, devis, suivi des litiges/SAV, gestion des réceptions/livraisons et de stock. "
-            image="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
-          />
-        </Grid>
-        <Grid item xs>
-          <Item
-            title="Support"
-            content="Traitement des tickets, diagnostic et dépannage, suivi des dossiers clients, formation des utilisateurs."
-            image="https://image.shutterstock.com/image-photo/smiling-friendly-female-callcenter-agent-600w-1175066677.jpg"
-          />
-        </Grid>
-        <Grid item xs>
-          <Item
-            title="Informatique"
-            content="Linux (Debian), Windows, macOS. Docker, sauvegardes ZFS, intégration continue. SQL, JavaScript/React, Python."
-            image="https://as1.ftcdn.net/jpg/02/25/56/76/500_F_225567663_gPfQuBNATBPkZO8KEGl256xPqURL6cbd.jpg"
-          />
-        </Grid>
-        <Grid item xs>
-          <Item
-            title="Projets personnels"
-            content="Fring (fring.sevan.zone), application de garde-robe avec IA, et un serveur auto-hébergé : Docker, photos, documents, médias, sauvegardes."
-            image="https://as1.ftcdn.net/jpg/02/97/41/58/500_F_297415844_RQplmtTHNTNBJC8Mo2NbIfmUo9J7B1FT.jpg"
-          />
-        </Grid>
+        {cards.map(card => (
+          <Grid item xs={12} sm={6} md={4} key={card.title}>
+            <Item {...card} />
+          </Grid>
+        ))}
       </Grid>
     </div>
   );
-}
+};
 
-export default Competences
+export default Competences;

@@ -8,6 +8,7 @@ import data from "./data";
 import CenteredTabs from './components/menu';
 import Home from './components/home';
 import Cv from './components/cv';
+import Footer from './components/Footer';
 
 const App = () => {
   const [currentTab, setCurrentTab] = useState(0); 
@@ -22,10 +23,10 @@ const App = () => {
       <CenteredTabs current={currentTab} onChange={onChangeTab} />
 
       {currentTab === 1 && (<Competences />)}
-      {currentTab === 2 && (<Exemple2 title="Expériences" experiences={data.Experiences} />)}
+      {currentTab === 2 && (<Exemple2 title="Parcours" experiences={data.Experiences} />)}
       {currentTab === 3 && (<Cv />)}
-      {currentTab === 0 && (<Home />)}
-      
+      {currentTab === 0 && (<Home onNavigate={setCurrentTab} />)}
+      <Footer />
     </ThemeProvider>
   )
 };

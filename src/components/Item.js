@@ -1,69 +1,54 @@
 import React from 'react';
-import { Card,
-         CardActionArea,
-         CardMedia,
-         CardContent,
-         Typography,
-         CardActions,
-         Button }     from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
+import { Card, CardContent, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    margin: theme.spacing(3),
-    width: 345,
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
   },
-  media: {
-    height: 140,
+  band: {
+    background: theme.palette.primary.main,
+    color: '#fff',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 96,
+    '& svg': {
+      fontSize: 48,
+    },
   },
   title: {
     color: theme.palette.primary.main,
+    fontWeight: 600,
   },
 }));
 
-const Item = ({ image, title, link, content }) => {
+const Item = ({ icon: Icon, title, content }) => {
   const classes = useStyles();
-
   return (
     <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={image}
-          title={title}
-          link={link}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2" className={title}>
-            {title}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {content}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary" href={link}>
-
-          En savoir plus !
-        </Button>
-      </CardActions>
+      <div className={classes.band} aria-hidden="true">
+        {Icon && <Icon />}
+      </div>
+      <CardContent>
+        <Typography gutterBottom variant="h6" component="h2" className={classes.title}>
+          {title}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          {content}
+        </Typography>
+      </CardContent>
     </Card>
   );
 };
 
-Item.defaultProps = {
-  title: 'Wow',
-  content: 'It s amazing !',
-  image: 'https://pixabay.com/images/id-5424776/',
-};
-
 Item.propTypes = {
-	title: PropTypes.string.isRequired,
+  icon: PropTypes.elementType,
+  title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
 };
 
 export default Item;

@@ -1,48 +1,57 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Me from '../img/me.png';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        marginTop: '1px',
+        position: 'relative',
+        marginTop: theme.spacing(1),
+        paddingTop: 50,
     },
-    size: {
+    stripe: {
         width: '100%',
     },
-    first: {
-        backgroundColor: theme.palette.primary.main,
-        height: '50px',
-    },
     second: {
-      backgroundColor: theme.palette.secondary.main,
-      height: '12px',
-    },
-    third: {
-        backgroundColor: theme.palette.background.default,
-        height: '50px',
+        backgroundColor: theme.palette.secondary.main,
+        height: '12px',
     },
     fourth: {
         backgroundColor: '#ea907a',
         height: '25px',
     },
-    image: {
-        position: 'fixed',
-        padding: '0px 50px',
+    first: {
+        backgroundColor: theme.palette.primary.main,
+        height: '50px',
     },
-  }));
+    image: {
+        position: 'absolute',
+        top: 0,
+        left: 50,
+        width: 145,
+        height: 'auto',
+        [theme.breakpoints.down('xs')]: {
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: 110,
+        },
+    },
+    spacer: {
+        height: 90,
+        [theme.breakpoints.down('xs')]: {
+            height: 60,
+        },
+    },
+}));
 
 const Bandeau = () => {
     const classes = useStyles();
-    
     return (
         <div className={classes.root}>
-            <img className={classes.image} src={Me} alt='Me'/>
-            <div>
-                <div className={`${classes.third} ${classes.size}`} />
-                <div className={`${classes.second} ${classes.size}`} />
-                <div className={`${classes.fourth} ${classes.size}`} />
-                <div className={`${classes.first} ${classes.size}`} />
-            </div>
+            <div className={`${classes.stripe} ${classes.second}`} />
+            <div className={`${classes.stripe} ${classes.fourth}`} />
+            <div className={`${classes.stripe} ${classes.first}`} />
+            <img className={classes.image} src={Me} alt="Sevan Safarian" />
+            <div className={classes.spacer} />
         </div>
     );
 };
