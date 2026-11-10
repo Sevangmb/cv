@@ -1,7 +1,6 @@
 import * as React from 'react';
-import Chip from '@mui/material/Chip';
-import FaceIcon from '@mui/icons-material/Face';
-import Stack from '@mui/material/Stack';
+import Chip from '@material-ui/core/Chip';
+import FaceIcon from '@material-ui/icons/Face';
 
 class Api extends React.Component {
   constructor(props) {
@@ -33,11 +32,7 @@ class Api extends React.Component {
             <span>{item.cast}</span>
             {
                             item.cast.map((castDetail) => {
-                              return (
-                                <Stack direction="row" spacing={1}> 
-                                <Chip size="small" icon={<FaceIcon />} label={castDetail} variant="outlined" />
-                                </Stack>
-                              );
+                              return <Chip size="small" icon={<FaceIcon />} label={castDetail} variant="outlined" />;
                               
                             })
                           }
