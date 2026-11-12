@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './cv.css';
 import data from './data';
 import Me from './img/me-portrait.webp';
+import Tele from './img/Lpage.webp';
 import Terminal from './components/Terminal';
 
 export const PDF_URL = `${process.env.PUBLIC_URL}/Sevan_Safarian_CV.pdf`;
@@ -26,8 +27,50 @@ const Poste = ({ experience, role }) => (
   </div>
 );
 
+// Trois apparences pour le même contenu : Papier (sobre), Rétro (l'ancienne version GitHub Pages)
+// et Moderne. Le choix se garde dans le navigateur et peut se forcer par ?style=retro dans l'adresse.
+export const STYLES = [
+  { id: 'papier', label: 'Papier' },
+  { id: 'retro', label: 'Rétro' },
+  { id: 'moderne', label: 'Moderne' },
+];
+
+const styleInitial = () => {
+  const ids = STYLES.map(s => s.id);
+  const demande = new URLSearchParams(window.location.search).get('style');
+  if (ids.includes(demande)) return demande;
+  try {
+    const garde = window.localStorage.getItem('cv-style');
+    if (ids.includes(garde)) return garde;
+  } catch (e) { /* stockage indisponible : on garde le style par défaut */ }
+  return 'papier';
+};
+
+const Selecteur = ({ style, onChange }) => (
+  <nav className="selecteur" aria-label="Apparence du CV">
+    <span className="selecteur-titre">Apparence</span>
+    {STYLES.map(s => (
+      <button
+        key={s.id}
+        type="button"
+        className={s.id === style ? 'actif' : ''}
+        aria-pressed={s.id === style}
+        onClick={() => onChange(s.id)}
+      >
+        {s.label}
+      </button>
+    ))}
+  </nav>
+);
+
 const App = () => {
   const [terminalOpen, setTerminalOpen] = useState(false);
+  const [style, setStyle] = useState(styleInitial);
+
+  useEffect(() => {
+    document.documentElement.dataset.style = style;
+    try { window.localStorage.setItem('cv-style', style); } catch (e) { /* rien */ }
+  }, [style]);
 
   // Le terminal reste caché : touche « ² » ou « ` », ou le lien discret du bas de page.
   useEffect(() => {
@@ -43,6 +86,15 @@ const App = () => {
   }, []);
 
   return (
+    <>
+    <Selecteur style={style} onChange={setStyle} />
+    {style === 'retro' && (
+      <div className="bandeau" aria-hidden="true">
+        <div className="bande bande-jaune" />
+        <div className="bande bande-corail" />
+        <div className="bande bande-canard" />
+      </div>
+    )}
     <div className="page">
       <header className="entete">
         <div>
@@ -57,6 +109,11 @@ const App = () => {
           </p>
         </div>
         <img className="portrait" src={Me} alt="Sevan Safarian" width="120" height="150" />
+        {style === 'retro' && (
+          <button type="button" className="tele" onClick={() => setTerminalOpen(true)} title="Ouvrir le terminal">
+            <img src={Tele} alt="Une vieille télé : cliquer pour ouvrir le terminal" width="1024" height="768" />
+          </button>
+        )}
       </header>
 
       <main id="contenu">
@@ -113,9 +170,10 @@ const App = () => {
         <p>
           Ce site est construit à partir de mon dépôt{' '}
           <a href="https://github.com/Sevangmb/cv" target="_blank" rel="noopener noreferrer">GitHub Sevangmb/cv</a>,
-          publié d'abord sur{' '}
-          <a href="https://sevangmb.github.io/cv/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>,
-          aujourd'hui sur mon propre serveur.
+          publié sur{' '}
+          <a href="https://sevangmb.github.io/cv/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>{' '}
+          et sur mon propre serveur,{' '}
+          <a href="https://cv.sevan.zone/" target="_blank" rel="noopener noreferrer">cv.sevan.zone</a>.
         </p>
         <p>
           <button type="button" className="lien-terminal" onClick={() => setTerminalOpen(true)}>
@@ -126,6 +184,7 @@ const App = () => {
 
       <Terminal open={terminalOpen} onClose={() => setTerminalOpen(false)} pdfUrl={PDF_URL} />
     </div>
+    </>
   );
 };
 
